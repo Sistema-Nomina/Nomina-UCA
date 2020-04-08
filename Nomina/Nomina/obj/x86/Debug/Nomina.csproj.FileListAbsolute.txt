@@ -1,0 +1,6 @@
+/home/dmarcelo/Descargas/Nomina/Nomina/bin/Debug/Nomina.exe
+/home/dmarcelo/Descargas/Nomina/Nomina/bin/Debug/Nomina.pdb
+/home/dmarcelo/Descargas/Nomina/Nomina/obj/x86/Debug/Nomina.csprojAssemblyReference.cache
+/home/dmarcelo/Descargas/Nomina/Nomina/obj/x86/Debug/Nomina.csproj.CoreCompileInputs.cache
+/home/dmarcelo/Descargas/Nomina/Nomina/obj/x86/Debug/Nomina.exe
+/home/dmarcelo/Descargas/Nomina/Nomina/obj/x86/Debug/Nomina.pdb

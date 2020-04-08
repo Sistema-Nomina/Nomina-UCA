@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/Nomina.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="765 300">
+    <action-group name="Default">
+      <action id="InicioAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Inicio</property>
+        <property name="ShortLabel" translatable="yes">Inicio</property>
+      </action>
+      <action id="UsuarioAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Usuario</property>
+        <property name="ShortLabel" translatable="yes">Usuario</property>
+      </action>
+      <action id="EmpleadoAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Empleado</property>
+        <property name="ShortLabel" translatable="yes">Empleado</property>
+      </action>
+      <action id="NminaAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Nómina</property>
+        <property name="ShortLabel" translatable="yes">Nómina</property>
+      </action>
+      <action id="PanelAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Panel</property>
+        <property name="ShortLabel" translatable="yes">Panel</property>
+      </action>
+      <action id="ConfiguracinAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Configuración</property>
+        <property name="ShortLabel" translatable="yes">Configuración</property>
+      </action>
+      <action id="AgregarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="VisualizarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="ModificarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Modificar</property>
+        <property name="ShortLabel" translatable="yes">Modificar</property>
+      </action>
+      <action id="EliminarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Eliminar</property>
+        <property name="ShortLabel" translatable="yes">Eliminar</property>
+      </action>
+      <action id="AgregarAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar </property>
+        <property name="ShortLabel" translatable="yes">Agregar </property>
+      </action>
+      <action id="VisualizarAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="EditarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Editar</property>
+        <property name="ShortLabel" translatable="yes">Editar</property>
+      </action>
+      <action id="BorrarAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Borrar</property>
+        <property name="ShortLabel" translatable="yes">Borrar</property>
+      </action>
+      <action id="VisualizarAction2">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="DetalleDeEmpleadoAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Detalle de Empleado</property>
+        <property name="ShortLabel" translatable="yes">Detalle de Empleado</property>
+      </action>
+      <action id="OpcionesAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Opciones</property>
+        <property name="ShortLabel" translatable="yes">Opciones</property>
+      </action>
+      <action id="PlantillasAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Plantillas</property>
+        <property name="ShortLabel" translatable="yes">Plantillas</property>
+      </action>
+      <action id="PagosAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Pagos</property>
+        <property name="ShortLabel" translatable="yes">Pagos</property>
+      </action>
+      <action id="EmpresaAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Empresa</property>
+        <property name="ShortLabel" translatable="yes">Empresa</property>
+      </action>
+      <action id="SucursalAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Sucursal</property>
+        <property name="ShortLabel" translatable="yes">Sucursal</property>
+      </action>
+      <action id="AgregarAction2">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="VisualizarAction3">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="EditarAction1">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Editar</property>
+        <property name="ShortLabel" translatable="yes">Editar</property>
+      </action>
+      <action id="AgregarAction3">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="VisualizarAction4">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="EditarAction2">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Editar</property>
+        <property name="ShortLabel" translatable="yes">Editar</property>
+      </action>
+      <action id="AgregarAction4">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="VisualizarAction5">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Visualizar</property>
+        <property name="ShortLabel" translatable="yes">Visualizar</property>
+      </action>
+      <action id="ExtrasAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Extras</property>
+        <property name="ShortLabel" translatable="yes">Extras</property>
+      </action>
+      <action id="AgregarAction5">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="DeduccionesAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Deducciones</property>
+        <property name="ShortLabel" translatable="yes">Deducciones</property>
+      </action>
+      <action id="AgregarAction6">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Agregar</property>
+        <property name="ShortLabel" translatable="yes">Agregar</property>
+      </action>
+      <action id="AyudaAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Ayuda</property>
+        <property name="ShortLabel" translatable="yes">Ayuda</property>
+      </action>
+    </action-group>
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.VBox" id="vbox1">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.HBox" id="hbox1">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.ColorButton" id="colorbutton2">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Events">ButtonMotionMask, ButtonPressMask, ButtonReleaseMask</property>
+                <property name="Alpha">-1</property>
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Label" id="label3">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">SISTEMA DE NÓMINA</property>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.ColorButton" id="colorbutton3">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Events">ButtonMotionMask, ButtonPressMask, ButtonReleaseMask</property>
+                <property name="Alpha">-1</property>
+              </widget>
+              <packing>
+                <property name="Position">2</property>
+                <property name="AutoSize">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.MenuBar" id="menubar1">
+            <property name="MemberName" />
+            <node name="__gtksharp_95_Stetic_Editor_ActionMenuBar" type="Menubar">
+              <node type="Menu" action="InicioAction">
+                <node type="Menuitem" action="PanelAction" />
+              </node>
+              <node type="Menu" action="UsuarioAction">
+                <node type="Menuitem" action="AgregarAction" />
+                <node type="Menuitem" action="VisualizarAction" />
+                <node type="Menuitem" action="ModificarAction" />
+                <node type="Menuitem" action="EliminarAction" />
+              </node>
+              <node type="Menu" action="EmpleadoAction">
+                <node type="Menuitem" action="AgregarAction1" />
+                <node type="Menuitem" action="VisualizarAction1" />
+                <node type="Menuitem" action="EditarAction" />
+                <node type="Menuitem" action="BorrarAction" />
+              </node>
+              <node type="Menu" action="NminaAction">
+                <node type="Menuitem" action="VisualizarAction2" />
+                <node type="Menuitem" action="DetalleDeEmpleadoAction" />
+                <node type="Menu" action="OpcionesAction">
+                  <node type="Menuitem" action="PlantillasAction" />
+                  <node type="Menu" action="PagosAction">
+                    <node type="Menuitem" action="AgregarAction4" />
+                    <node type="Menuitem" action="VisualizarAction5" />
+                  </node>
+                  <node type="Menu" action="ExtrasAction">
+                    <node type="Menuitem" action="AgregarAction5" />
+                  </node>
+                  <node type="Menu" action="DeduccionesAction">
+                    <node type="Menuitem" action="AgregarAction6" />
+                  </node>
+                </node>
+              </node>
+              <node type="Menu" action="ConfiguracinAction">
+                <node type="Menu" action="EmpresaAction">
+                  <node type="Menuitem" action="AgregarAction2" />
+                  <node type="Menuitem" action="VisualizarAction3" />
+                  <node type="Menuitem" action="EditarAction1" />
+                </node>
+                <node type="Menu" action="SucursalAction">
+                  <node type="Menuitem" action="AgregarAction3" />
+                  <node type="Menuitem" action="VisualizarAction4" />
+                  <node type="Menuitem" action="EditarAction2" />
+                </node>
+              </node>
+              <node type="Menu" action="AyudaAction" />
+            </node>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.VBox" id="vbox3">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.Alignment" id="alignment1">
+                <property name="MemberName" />
+                <child>
+                  <placeholder />
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Alignment" id="alignment2">
+                <property name="MemberName" />
+                <child>
+                  <placeholder />
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.HBox" id="hbox4">
+                <property name="MemberName" />
+                <property name="Spacing">6</property>
+                <child>
+                  <widget class="Gtk.Alignment" id="alignment3">
+                    <property name="MemberName" />
+                    <child>
+                      <placeholder />
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Alignment" id="alignment4">
+                    <property name="MemberName" />
+                    <child>
+                      <placeholder />
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="btnSalir">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">Salir del Sistema</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="OnBtnSalirClicked" />
+                  </widget>
+                  <packing>
+                    <property name="Position">2</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">2</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">2</property>
+            <property name="AutoSize">True</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
