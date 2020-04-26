@@ -15,7 +15,7 @@ namespace Nomina.Datos
             List<Nomina.Entidades.Empleado> listaEmpleado = new List<Nomina.Entidades.Empleado>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
-            sb.Append("USE Nomina;");
+            sb.Append("USE nomina;");
             sb.Append("Select * from Empleado;");
 
             try
@@ -28,8 +28,11 @@ namespace Nomina.Datos
                     {
                         IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
                         Nombre = idr["Nombre"].ToString(),
-                        Apellidos = idr["Apellidos"].ToString()
-                        //Last_update = Convert.ToDateTime(idr["last_update"])
+                        Apellidos = idr["Apellidos"].ToString(),
+                        Cedula = idr["Cedula"].ToString(),
+                        SalarioEmpleado = Convert.ToDouble(idr["SalarioEmpleado"]),
+                        Fecha_contratacion = Convert.ToDateTime(idr["Fecha_Contratacion"]),
+                        Direccion = idr["Direccion"].ToString(),
                     };
 
                     listaEmpleado.Add(a);

@@ -2,23 +2,16 @@
   <MonoDevelop.Ide.ItemProperties.Nomina PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Datos/DTEmpleado.cs">
     <Files>
-      <File FileName="Nomina/MainWindow.cs" Line="1" Column="1" />
-      <File FileName="Nomina/Datos/conexion.cs" Line="111" Column="19" />
-      <File FileName="Nomina/Program.cs" Line="16" Column="24" />
-      <File FileName="Nomina/Datos/DTEmpleado.cs" Line="1" Column="1" />
+      <File FileName="Nomina/Datos/DTEmpleado.cs" Line="23" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Nomina" expanded="True">
-            <Node name="Nomina" expanded="True">
-              <Node name="UserInterface" expanded="True" />
-              <Node name="Datos" expanded="True">
-                <Node name="DTEmpleado.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node />
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

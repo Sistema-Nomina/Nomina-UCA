@@ -31,7 +31,7 @@ namespace Nomina.Datos
             MySqlConnectionStringBuilder scb = new MySqlConnectionStringBuilder();
             scb.Server = "localhost";
             scb.UserID = "root";
-            scb.Database = "Nomina";
+            scb.Database = "nomina";
             scb.Password = "laba1234";
 
             return scb.ConnectionString;

@@ -33,7 +33,7 @@ public partial class MainWindow
 
 	private global::Gtk.Action BorrarAction;
 
-	private global::Gtk.Action VisualizarAction2;
+	private global::Gtk.Action VisualizarAction6;
 
 	private global::Gtk.Action DetalleDeEmpleadoAction;
 
@@ -72,6 +72,10 @@ public partial class MainWindow
 	private global::Gtk.Action AgregarAction6;
 
 	private global::Gtk.Action AyudaAction;
+
+	private global::Gtk.Action VisualizarAction7;
+
+	private global::Gtk.Action DetalleDeEmpleadoAction1;
 
 	private global::Gtk.VBox vbox1;
 
@@ -147,9 +151,9 @@ public partial class MainWindow
 		this.BorrarAction = new global::Gtk.Action("BorrarAction", global::Mono.Unix.Catalog.GetString("Borrar"), null, null);
 		this.BorrarAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Borrar");
 		w1.Add(this.BorrarAction, null);
-		this.VisualizarAction2 = new global::Gtk.Action("VisualizarAction2", global::Mono.Unix.Catalog.GetString("Visualizar"), null, null);
-		this.VisualizarAction2.ShortLabel = global::Mono.Unix.Catalog.GetString("Visualizar");
-		w1.Add(this.VisualizarAction2, null);
+		this.VisualizarAction6 = new global::Gtk.Action("VisualizarAction6", global::Mono.Unix.Catalog.GetString("Visualizar"), null, null);
+		this.VisualizarAction6.ShortLabel = global::Mono.Unix.Catalog.GetString("Visualizar");
+		w1.Add(this.VisualizarAction6, null);
 		this.DetalleDeEmpleadoAction = new global::Gtk.Action("DetalleDeEmpleadoAction", global::Mono.Unix.Catalog.GetString("Detalle de Empleado"), null, null);
 		this.DetalleDeEmpleadoAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Detalle de Empleado");
 		w1.Add(this.DetalleDeEmpleadoAction, null);
@@ -207,6 +211,12 @@ public partial class MainWindow
 		this.AyudaAction = new global::Gtk.Action("AyudaAction", global::Mono.Unix.Catalog.GetString("Ayuda"), null, null);
 		this.AyudaAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Ayuda");
 		w1.Add(this.AyudaAction, null);
+		this.VisualizarAction7 = new global::Gtk.Action("VisualizarAction7", global::Mono.Unix.Catalog.GetString("Visualizar"), null, null);
+		this.VisualizarAction7.ShortLabel = global::Mono.Unix.Catalog.GetString("Visualizar");
+		w1.Add(this.VisualizarAction7, null);
+		this.DetalleDeEmpleadoAction1 = new global::Gtk.Action("DetalleDeEmpleadoAction1", global::Mono.Unix.Catalog.GetString("Detalle de Empleado"), null, null);
+		this.DetalleDeEmpleadoAction1.ShortLabel = global::Mono.Unix.Catalog.GetString("Detalle de Empleado");
+		w1.Add(this.DetalleDeEmpleadoAction1, null);
 		this.UIManager.InsertActionGroup(w1, 0);
 		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
@@ -260,25 +270,24 @@ public partial class MainWindow
 				"ficarAction\' action=\'ModificarAction\'/><menuitem name=\'EliminarAction\' action=\'E" +
 				"liminarAction\'/></menu><menu name=\'EmpleadoAction\' action=\'EmpleadoAction\'><menu" +
 				"item name=\'AgregarAction1\' action=\'AgregarAction1\'/><menuitem name=\'VisualizarAc" +
-				"tion1\' action=\'VisualizarAction1\'/><menuitem name=\'EditarAction\' action=\'EditarA" +
-				"ction\'/><menuitem name=\'BorrarAction\' action=\'BorrarAction\'/></menu><menu name=\'" +
-				"NminaAction\' action=\'NminaAction\'><menuitem name=\'VisualizarAction2\' action=\'Vis" +
-				"ualizarAction2\'/><menuitem name=\'DetalleDeEmpleadoAction\' action=\'DetalleDeEmple" +
-				"adoAction\'/><menu name=\'OpcionesAction\' action=\'OpcionesAction\'><menuitem name=\'" +
-				"PlantillasAction\' action=\'PlantillasAction\'/><menu name=\'PagosAction\' action=\'Pa" +
-				"gosAction\'><menuitem name=\'AgregarAction4\' action=\'AgregarAction4\'/><menuitem na" +
-				"me=\'VisualizarAction5\' action=\'VisualizarAction5\'/></menu><menu name=\'ExtrasActi" +
-				"on\' action=\'ExtrasAction\'><menuitem name=\'AgregarAction5\' action=\'AgregarAction5" +
-				"\'/></menu><menu name=\'DeduccionesAction\' action=\'DeduccionesAction\'><menuitem na" +
-				"me=\'AgregarAction6\' action=\'AgregarAction6\'/></menu></menu></menu><menu name=\'Co" +
-				"nfiguracinAction\' action=\'ConfiguracinAction\'><menu name=\'EmpresaAction\' action=" +
-				"\'EmpresaAction\'><menuitem name=\'AgregarAction2\' action=\'AgregarAction2\'/><menuit" +
-				"em name=\'VisualizarAction3\' action=\'VisualizarAction3\'/><menuitem name=\'EditarAc" +
-				"tion1\' action=\'EditarAction1\'/></menu><menu name=\'SucursalAction\' action=\'Sucurs" +
-				"alAction\'><menuitem name=\'AgregarAction3\' action=\'AgregarAction3\'/><menuitem nam" +
-				"e=\'VisualizarAction4\' action=\'VisualizarAction4\'/><menuitem name=\'EditarAction2\'" +
-				" action=\'EditarAction2\'/></menu></menu><menu name=\'AyudaAction\' action=\'AyudaAct" +
-				"ion\'/></menubar></ui>");
+				"tion1\' action=\'VisualizarAction1\'/><menuitem name=\'BorrarAction\' action=\'BorrarA" +
+				"ction\'/></menu><menu name=\'NminaAction\' action=\'NminaAction\'><menu name=\'Opcione" +
+				"sAction\' action=\'OpcionesAction\'><menu name=\'PlantillasAction\' action=\'Plantilla" +
+				"sAction\'><menuitem name=\'VisualizarAction7\' action=\'VisualizarAction7\'/><menuite" +
+				"m name=\'DetalleDeEmpleadoAction1\' action=\'DetalleDeEmpleadoAction1\'/></menu><men" +
+				"u name=\'PagosAction\' action=\'PagosAction\'><menuitem name=\'AgregarAction4\' action" +
+				"=\'AgregarAction4\'/><menuitem name=\'VisualizarAction5\' action=\'VisualizarAction5\'" +
+				"/></menu><menu name=\'ExtrasAction\' action=\'ExtrasAction\'><menuitem name=\'Agregar" +
+				"Action5\' action=\'AgregarAction5\'/></menu><menu name=\'DeduccionesAction\' action=\'" +
+				"DeduccionesAction\'><menuitem name=\'AgregarAction6\' action=\'AgregarAction6\'/></me" +
+				"nu></menu></menu><menu name=\'ConfiguracinAction\' action=\'ConfiguracinAction\'><me" +
+				"nu name=\'EmpresaAction\' action=\'EmpresaAction\'><menuitem name=\'AgregarAction2\' a" +
+				"ction=\'AgregarAction2\'/><menuitem name=\'VisualizarAction3\' action=\'VisualizarAct" +
+				"ion3\'/><menuitem name=\'EditarAction1\' action=\'EditarAction1\'/></menu><menu name=" +
+				"\'SucursalAction\' action=\'SucursalAction\'><menuitem name=\'AgregarAction3\' action=" +
+				"\'AgregarAction3\'/><menuitem name=\'VisualizarAction4\' action=\'VisualizarAction4\'/" +
+				"><menuitem name=\'EditarAction2\' action=\'EditarAction2\'/></menu></menu><menu name" +
+				"=\'AyudaAction\' action=\'AyudaAction\'/></menubar></ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add(this.menubar1);
@@ -346,6 +355,25 @@ public partial class MainWindow
 		this.DefaultHeight = 300;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.AgregarAction.Activated += new global::System.EventHandler(this.OnAgregarActionActivated);
+		this.VisualizarAction.Activated += new global::System.EventHandler(this.OnVisualizarActionActivated);
+		this.ModificarAction.Activated += new global::System.EventHandler(this.OnModificarActionActivated);
+		this.EliminarAction.Activated += new global::System.EventHandler(this.OnEliminarActionActivated);
+		this.AgregarAction1.Activated += new global::System.EventHandler(this.OnAgregarAction1Activated);
+		this.VisualizarAction1.Activated += new global::System.EventHandler(this.OnVisualizarAction1Activated);
+		this.BorrarAction.Activated += new global::System.EventHandler(this.OnBorrarActionActivated);
+		this.AgregarAction2.Activated += new global::System.EventHandler(this.OnAgregarAction2Activated);
+		this.VisualizarAction3.Activated += new global::System.EventHandler(this.OnVisualizarAction3Activated);
+		this.EditarAction1.Activated += new global::System.EventHandler(this.OnEditarAction1Activated);
+		this.AgregarAction3.Activated += new global::System.EventHandler(this.OnAgregarAction3Activated);
+		this.VisualizarAction4.Activated += new global::System.EventHandler(this.OnVisualizarAction4Activated);
+		this.EditarAction2.Activated += new global::System.EventHandler(this.OnEditarAction2Activated);
+		this.AgregarAction4.Activated += new global::System.EventHandler(this.OnAgregarAction4Activated);
+		this.VisualizarAction5.Activated += new global::System.EventHandler(this.OnVisualizarAction5Activated);
+		this.AgregarAction5.Activated += new global::System.EventHandler(this.OnAgregarAction5Activated);
+		this.AgregarAction6.Activated += new global::System.EventHandler(this.OnAgregarAction6Activated);
+		this.VisualizarAction7.Activated += new global::System.EventHandler(this.OnVisualizarAction7Activated);
+		this.DetalleDeEmpleadoAction1.Activated += new global::System.EventHandler(this.OnDetalleDeEmpleadoAction1Activated);
 		this.btnSalir.Clicked += new global::System.EventHandler(this.OnBtnSalirClicked);
 	}
 }

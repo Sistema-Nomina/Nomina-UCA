@@ -11,9 +11,9 @@ namespace Nomina
             Application.Init();
             MainWindow win = new MainWindow();
             win.Show();
-            conexion cn = new conexion();
+            /*conexion cn = new conexion();
             cn.Open();
-            cn.Close();
+            cn.Close();*/
             Application.Run();
         }
     }

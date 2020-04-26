@@ -31,21 +31,26 @@
     <Reference Include="System" />
     <Reference Include="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>glib-sharp-2.0</Package>
     </Reference>
     <Reference Include="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
     <Reference Include="MySql.Data">
@@ -96,6 +101,44 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Area.cs" />
     <Compile Include="Entidades\Cargo.cs" />
+    <Compile Include="Agregar_Usuario.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Usuario.cs" />
+    <Compile Include="Modificar_Usuario.cs" />
+    <Compile Include="gtk-gui\Nomina.Modificar_Usuario.cs" />
+    <Compile Include="Visualizar_Usuario.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Usuario.cs" />
+    <Compile Include="Eliminar_Usuario.cs" />
+    <Compile Include="gtk-gui\Nomina.Eliminar_Usuario.cs" />
+    <Compile Include="Agregar_Empleado.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Empleado.cs" />
+    <Compile Include="Visualizar_Empleado.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Empleado.cs" />
+    <Compile Include="Eliminar_Empleado.cs" />
+    <Compile Include="gtk-gui\Nomina.Eliminar_Empleado.cs" />
+    <Compile Include="Visualizar_Plantilla.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Plantilla.cs" />
+    <Compile Include="Detalle Empleado.cs" />
+    <Compile Include="gtk-gui\Nomina.Detalle_Empleado.cs" />
+    <Compile Include="Agregar_Pago.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Pago.cs" />
+    <Compile Include="Visualizar_Pago.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Pago.cs" />
+    <Compile Include="Agregar_Extras.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Extras.cs" />
+    <Compile Include="Agregar_Deducciones.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Deducciones.cs" />
+    <Compile Include="Agregar_Empresa.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Empresa.cs" />
+    <Compile Include="Visualizar_Empresa.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Empresa.cs" />
+    <Compile Include="Editar_Empresa.cs" />
+    <Compile Include="gtk-gui\Nomina.Editar_Empresa.cs" />
+    <Compile Include="Agregar_Sucursal.cs" />
+    <Compile Include="gtk-gui\Nomina.Agregar_Sucursal.cs" />
+    <Compile Include="Visualizar_Sucursal.cs" />
+    <Compile Include="gtk-gui\Nomina.Visualizar_Sucursal.cs" />
+    <Compile Include="Editar_Sucursal.cs" />
+    <Compile Include="gtk-gui\Nomina.Editar_Sucursal.cs" />
     <Compile Include="Datos\conexion.cs" />
     <Compile Include="Datos\DTEmpleado.cs" />
   </ItemGroup>
