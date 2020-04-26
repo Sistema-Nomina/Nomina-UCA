@@ -1,0 +1,1 @@
+La interfaz que recupera datos es la de Visulizar_Empleado.
