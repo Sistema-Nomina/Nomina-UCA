@@ -38,6 +38,8 @@ namespace Nomina
 
 		private global::Gtk.Entry entry46;
 
+		private global::Gtk.Label label1;
+
 		private global::Gtk.Label label57;
 
 		private global::Gtk.Label label59;
@@ -186,39 +188,50 @@ namespace Nomina
 			w12.XOptions = ((global::Gtk.AttachOptions)(4));
 			w12.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table12.Gtk.Table+TableChild
+			this.label1 = new global::Gtk.Label();
+			this.label1.Name = "label1";
+			this.label1.Xalign = 1F;
+			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString("Nombre:");
+			this.table12.Add(this.label1);
+			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table12[this.label1]));
+			w13.TopAttach = ((uint)(1));
+			w13.BottomAttach = ((uint)(2));
+			w13.XOptions = ((global::Gtk.AttachOptions)(4));
+			w13.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child table12.Gtk.Table+TableChild
 			this.label57 = new global::Gtk.Label();
 			this.label57.Name = "label57";
 			this.label57.Xalign = 1F;
 			this.label57.LabelProp = global::Mono.Unix.Catalog.GetString("RUC:");
 			this.table12.Add(this.label57);
-			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table12[this.label57]));
-			w13.XOptions = ((global::Gtk.AttachOptions)(4));
-			w13.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table12[this.label57]));
+			w14.XOptions = ((global::Gtk.AttachOptions)(4));
+			w14.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table12.Gtk.Table+TableChild
 			this.label59 = new global::Gtk.Label();
 			this.label59.Name = "label59";
 			this.label59.Xalign = 1F;
 			this.label59.LabelProp = global::Mono.Unix.Catalog.GetString("Teléfono:");
 			this.table12.Add(this.label59);
-			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table12[this.label59]));
-			w14.TopAttach = ((uint)(2));
-			w14.BottomAttach = ((uint)(3));
-			w14.XOptions = ((global::Gtk.AttachOptions)(4));
-			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table12[this.label59]));
+			w15.TopAttach = ((uint)(2));
+			w15.BottomAttach = ((uint)(3));
+			w15.XOptions = ((global::Gtk.AttachOptions)(4));
+			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table12.Gtk.Table+TableChild
 			this.label60 = new global::Gtk.Label();
 			this.label60.Name = "label60";
 			this.label60.Xalign = 1F;
 			this.label60.LabelProp = global::Mono.Unix.Catalog.GetString("Dirección:");
 			this.table12.Add(this.label60);
-			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table12[this.label60]));
-			w15.TopAttach = ((uint)(3));
-			w15.BottomAttach = ((uint)(4));
-			w15.XOptions = ((global::Gtk.AttachOptions)(4));
-			w15.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table12[this.label60]));
+			w16.TopAttach = ((uint)(3));
+			w16.BottomAttach = ((uint)(4));
+			w16.XOptions = ((global::Gtk.AttachOptions)(4));
+			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.vbox17.Add(this.table12);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox17[this.table12]));
-			w16.Position = 2;
+			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox17[this.table12]));
+			w17.Position = 2;
 			this.Add(this.vbox17);
 			if ((this.Child != null))
 			{

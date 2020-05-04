@@ -142,10 +142,13 @@
     <Compile Include="Datos\conexion.cs" />
     <Compile Include="Datos\DTEmpleado.cs" />
     <Compile Include="Datos\DTEmpresa.cs" />
+    <Compile Include="Utilidades\Mensaje.cs" />
+    <Compile Include="Datos\DTSucursal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />
     <Folder Include="Datos\" />
+    <Folder Include="Utilidades\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

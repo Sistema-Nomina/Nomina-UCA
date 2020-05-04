@@ -1,20 +1,17 @@
 ﻿<Properties StartupConfiguration="{0F66297E-03CF-41EA-9E75-633146F6F00E}|Default">
   <MonoDevelop.Ide.ItemProperties.Nomina PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Datos/DTEmpresa.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Agregar_Sucursal.cs">
     <Files>
-      <File FileName="Nomina/Datos/DTEmpleado.cs" Line="55" Column="10" />
-      <File FileName="Nomina/Visualizar_Empresa.cs" Line="14" Column="30" />
-      <File FileName="Nomina/Datos/DTEmpresa.cs" Line="17" Column="38" />
-      <File FileName="Nomina/Agregar_Sucursal.cs" Line="14" Column="30" />
+      <File FileName="Nomina/Datos/DTSucursal.cs" Line="57" Column="135" />
+      <File FileName="Nomina/Visualizar_Empleado.cs" Line="1" Column="1" />
+      <File FileName="Nomina/Agregar_Sucursal.cs" Line="82" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Nomina" expanded="True">
             <Node name="Nomina" expanded="True">
-              <Node name="Datos" expanded="True">
-                <Node name="DTEmpresa.cs" selected="True" />
-              </Node>
+              <Node name="Agregar_Sucursal.cs" selected="True" />
             </Node>
           </Node>
         </State>
