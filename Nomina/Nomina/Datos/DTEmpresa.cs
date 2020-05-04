@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Nomina.Datos
 {
-    public class DTEmpleado
+    public class DTEmpresa
     {
-
         conexion con = new conexion();
 
-        public List<Nomina.Entidades.Empleado> ListarEmpleado()
+        public List<Nomina.Entidades.Empresa> ListarEmpresa()
         {
-            List<Nomina.Entidades.Empleado> listaEmpleado = new List<Nomina.Entidades.Empleado>();
+            List<Nomina.Entidades.Empresa> listaEmpresa = new List<Nomina.Entidades.Empresa>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Empleado;");
+            sb.Append("Select * from Empresa;");
 
             try
             {
@@ -24,23 +23,20 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 while (idr.Read())
                 {
-                    Nomina.Entidades.Empleado a = new Nomina.Entidades.Empleado()
+                    Nomina.Entidades.Empresa a = new Nomina.Entidades.Empresa()
                     {
-                        IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
+                        NumeroRuc = Convert.ToInt32(idr["NumeroRUC"]),
                         Nombre = idr["Nombre"].ToString(),
-                        Apellidos = idr["Apellidos"].ToString(),
-                        Cedula = idr["Cedula"].ToString(),
-                        SalarioEmpleado = Convert.ToDouble(idr["SalarioEmpleado"]),
-                        Fecha_contratacion = Convert.ToDateTime(idr["Fecha_Contratacion"]),
+                        Telefono = idr["Telefono"].ToString(),
                         Direccion = idr["Direccion"].ToString(),
                     };
 
-                    listaEmpleado.Add(a);
+                    listaEmpresa.Add(a);
 
                 }
                 idr.Close();
 
-                return listaEmpleado;
+                return listaEmpresa;
             }
             catch (Exception e)
             {
@@ -51,10 +47,9 @@ namespace Nomina.Datos
             {
                 con.Close();
             }
-            return listaEmpleado;
+            return listaEmpresa;
         }
-
-        public DTEmpleado()
+        public DTEmpresa()
         {
         }
     }

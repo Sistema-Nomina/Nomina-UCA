@@ -141,6 +141,7 @@
     <Compile Include="gtk-gui\Nomina.Editar_Sucursal.cs" />
     <Compile Include="Datos\conexion.cs" />
     <Compile Include="Datos\DTEmpleado.cs" />
+    <Compile Include="Datos\DTEmpresa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />

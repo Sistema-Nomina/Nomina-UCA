@@ -26,11 +26,11 @@ namespace Nomina
 
 		private global::Gtk.HSeparator hseparator14;
 
-		private global::Gtk.Label GtkLabel2;
+		private global::Gtk.Label GtkLabel4;
 
 		private global::Gtk.Table table14;
 
-		private global::Gtk.ComboBoxEntry comboboxentry4;
+		private global::Gtk.ComboBox cmbEmpresa;
 
 		private global::Gtk.Entry entry43;
 
@@ -117,11 +117,11 @@ namespace Nomina
 			w5.Position = 2;
 			this.GtkAlignment.Add(this.hbox46);
 			this.frame14.Add(this.GtkAlignment);
-			this.GtkLabel2 = new global::Gtk.Label();
-			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString("SUCURSALES");
-			this.GtkLabel2.UseMarkup = true;
-			this.frame14.LabelWidget = this.GtkLabel2;
+			this.GtkLabel4 = new global::Gtk.Label();
+			this.GtkLabel4.Name = "GtkLabel4";
+			this.GtkLabel4.LabelProp = global::Mono.Unix.Catalog.GetString("SUCURSALES");
+			this.GtkLabel4.UseMarkup = true;
+			this.frame14.LabelWidget = this.GtkLabel4;
 			this.vbox21.Add(this.frame14);
 			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox21[this.frame14]));
 			w8.Position = 1;
@@ -133,10 +133,10 @@ namespace Nomina
 			this.table14.RowSpacing = ((uint)(6));
 			this.table14.ColumnSpacing = ((uint)(6));
 			// Container child table14.Gtk.Table+TableChild
-			this.comboboxentry4 = global::Gtk.ComboBoxEntry.NewText();
-			this.comboboxentry4.Name = "comboboxentry4";
-			this.table14.Add(this.comboboxentry4);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table14[this.comboboxentry4]));
+			this.cmbEmpresa = global::Gtk.ComboBox.NewText();
+			this.cmbEmpresa.Name = "cmbEmpresa";
+			this.table14.Add(this.cmbEmpresa);
+			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table14[this.cmbEmpresa]));
 			w9.TopAttach = ((uint)(3));
 			w9.BottomAttach = ((uint)(4));
 			w9.LeftAttach = ((uint)(1));
