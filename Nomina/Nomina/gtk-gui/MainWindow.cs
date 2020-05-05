@@ -77,6 +77,8 @@ public partial class MainWindow
 
 	private global::Gtk.Action DetalleDeEmpleadoAction1;
 
+	private global::Gtk.Action dsAction;
+
 	private global::Gtk.VBox vbox1;
 
 	private global::Gtk.HBox hbox1;
@@ -217,6 +219,9 @@ public partial class MainWindow
 		this.DetalleDeEmpleadoAction1 = new global::Gtk.Action("DetalleDeEmpleadoAction1", global::Mono.Unix.Catalog.GetString("Detalle de Empleado"), null, null);
 		this.DetalleDeEmpleadoAction1.ShortLabel = global::Mono.Unix.Catalog.GetString("Detalle de Empleado");
 		w1.Add(this.DetalleDeEmpleadoAction1, null);
+		this.dsAction = new global::Gtk.Action("dsAction", global::Mono.Unix.Catalog.GetString("ds"), null, null);
+		this.dsAction.ShortLabel = global::Mono.Unix.Catalog.GetString("ds");
+		w1.Add(this.dsAction, null);
 		this.UIManager.InsertActionGroup(w1, 0);
 		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
