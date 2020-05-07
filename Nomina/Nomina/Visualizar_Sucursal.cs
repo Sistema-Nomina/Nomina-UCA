@@ -12,9 +12,11 @@ namespace Nomina
         {
             this.Build();
             llenarTreeview();
+            llenarCombobox();
         }
 
         ListStore ls = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
+        ListStore lscmb = new ListStore(typeof(String));
 
         //Método para llenar treeview
         public void llenarTreeview()
@@ -37,5 +39,24 @@ namespace Nomina
             trvSucursal.AppendColumn("NumeroRUC", new CellRendererText(), "text", 3);
 
         }
+
+
+
+        //Método para llenar combobox
+        public void llenarCombobox()
+        {
+            DTEmpresa dta = new DTEmpresa();
+            List<Nomina.Entidades.Empresa> lista = new List<Nomina.Entidades.Empresa>();
+            lista = dta.ListarEmpresa();
+
+            foreach (Nomina.Entidades.Empresa a in lista)
+            {
+                lscmb.AppendValues(a.Nombre.ToString());
+            }
+
+            //Crear el modelo de datos
+            cmbEmpresa.Model = lscmb;
+        }
+
     }
 }

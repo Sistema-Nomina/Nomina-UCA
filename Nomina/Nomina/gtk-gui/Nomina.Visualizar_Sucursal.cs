@@ -42,13 +42,21 @@ namespace Nomina
 
 		private global::Gtk.Button button13;
 
-		private global::Gtk.Label GtkLabel2;
+		private global::Gtk.Label GtkLabel6;
 
 		private global::Gtk.HBox hbox50;
 
 		private global::Gtk.Label label61;
 
-		private global::Gtk.ComboBoxEntry comboboxentry5;
+		private global::Gtk.HBox hbox4;
+
+		private global::Gtk.ComboBox cmbEmpresa;
+
+		private global::Gtk.HBox hbox5;
+
+		private global::Gtk.Alignment alignment3;
+
+		private global::Gtk.Button btnBuscarEmpresa;
 
 		private global::Gtk.HSeparator hseparator17;
 
@@ -201,11 +209,11 @@ namespace Nomina
 			w11.Position = 2;
 			this.GtkAlignment.Add(this.hbox47);
 			this.frame15.Add(this.GtkAlignment);
-			this.GtkLabel2 = new global::Gtk.Label();
-			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString("SUCURSALES");
-			this.GtkLabel2.UseMarkup = true;
-			this.frame15.LabelWidget = this.GtkLabel2;
+			this.GtkLabel6 = new global::Gtk.Label();
+			this.GtkLabel6.Name = "GtkLabel6";
+			this.GtkLabel6.LabelProp = global::Mono.Unix.Catalog.GetString("SUCURSALES");
+			this.GtkLabel6.UseMarkup = true;
+			this.frame15.LabelWidget = this.GtkLabel6;
 			this.vbox22.Add(this.frame15);
 			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox22[this.frame15]));
 			w14.Position = 1;
@@ -225,24 +233,52 @@ namespace Nomina
 			w15.Expand = false;
 			w15.Fill = false;
 			// Container child hbox50.Gtk.Box+BoxChild
-			this.comboboxentry5 = global::Gtk.ComboBoxEntry.NewText();
-			this.comboboxentry5.Name = "comboboxentry5";
-			this.hbox50.Add(this.comboboxentry5);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox50[this.comboboxentry5]));
-			w16.Position = 1;
-			w16.Expand = false;
-			w16.Fill = false;
+			this.hbox4 = new global::Gtk.HBox();
+			this.hbox4.Name = "hbox4";
+			this.hbox4.Spacing = 6;
+			// Container child hbox4.Gtk.Box+BoxChild
+			this.cmbEmpresa = global::Gtk.ComboBox.NewText();
+			this.cmbEmpresa.Name = "cmbEmpresa";
+			this.hbox4.Add(this.cmbEmpresa);
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.cmbEmpresa]));
+			w16.Position = 0;
+			// Container child hbox4.Gtk.Box+BoxChild
+			this.hbox5 = new global::Gtk.HBox();
+			this.hbox5.Name = "hbox5";
+			this.hbox5.Spacing = 6;
+			// Container child hbox5.Gtk.Box+BoxChild
+			this.alignment3 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
+			this.alignment3.Name = "alignment3";
+			this.hbox5.Add(this.alignment3);
+			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.alignment3]));
+			w17.Position = 0;
+			// Container child hbox5.Gtk.Box+BoxChild
+			this.btnBuscarEmpresa = new global::Gtk.Button();
+			this.btnBuscarEmpresa.CanFocus = true;
+			this.btnBuscarEmpresa.Name = "btnBuscarEmpresa";
+			this.btnBuscarEmpresa.UseUnderline = true;
+			this.btnBuscarEmpresa.Label = global::Mono.Unix.Catalog.GetString("Buscar por Empresa");
+			this.hbox5.Add(this.btnBuscarEmpresa);
+			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.btnBuscarEmpresa]));
+			w18.Position = 1;
+			w18.Fill = false;
+			this.hbox4.Add(this.hbox5);
+			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.hbox5]));
+			w19.Position = 1;
+			this.hbox50.Add(this.hbox4);
+			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox50[this.hbox4]));
+			w20.Position = 1;
 			// Container child hbox50.Gtk.Box+BoxChild
 			this.hseparator17 = new global::Gtk.HSeparator();
 			this.hseparator17.Name = "hseparator17";
 			this.hbox50.Add(this.hseparator17);
-			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.hbox50[this.hseparator17]));
-			w17.Position = 2;
+			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox50[this.hseparator17]));
+			w21.Position = 2;
 			this.vbox22.Add(this.hbox50);
-			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox22[this.hbox50]));
-			w18.Position = 2;
-			w18.Expand = false;
-			w18.Fill = false;
+			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.vbox22[this.hbox50]));
+			w22.Position = 2;
+			w22.Expand = false;
+			w22.Fill = false;
 			// Container child vbox22.Gtk.Box+BoxChild
 			this.vbox23 = new global::Gtk.VBox();
 			this.vbox23.Name = "vbox23";
@@ -257,16 +293,16 @@ namespace Nomina
 			this.trvSucursal.Name = "trvSucursal";
 			this.GtkScrolledWindow.Add(this.trvSucursal);
 			this.vbox23.Add(this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.GtkScrolledWindow]));
-			w20.Position = 0;
+			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.GtkScrolledWindow]));
+			w24.Position = 0;
 			// Container child vbox23.Gtk.Box+BoxChild
 			this.hseparator18 = new global::Gtk.HSeparator();
 			this.hseparator18.Name = "hseparator18";
 			this.vbox23.Add(this.hseparator18);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.hseparator18]));
-			w21.Position = 1;
-			w21.Expand = false;
-			w21.Fill = false;
+			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.hseparator18]));
+			w25.Position = 1;
+			w25.Expand = false;
+			w25.Fill = false;
 			// Container child vbox23.Gtk.Box+BoxChild
 			this.hbox51 = new global::Gtk.HBox();
 			this.hbox51.Name = "hbox51";
@@ -276,10 +312,10 @@ namespace Nomina
 			this.label17.Name = "label17";
 			this.label17.LabelProp = global::Mono.Unix.Catalog.GetString("Nombre:");
 			this.hbox51.Add(this.label17);
-			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.label17]));
-			w22.Position = 0;
-			w22.Expand = false;
-			w22.Fill = false;
+			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.label17]));
+			w26.Position = 0;
+			w26.Expand = false;
+			w26.Fill = false;
 			// Container child hbox51.Gtk.Box+BoxChild
 			this.entry13 = new global::Gtk.Entry();
 			this.entry13.CanFocus = true;
@@ -287,15 +323,15 @@ namespace Nomina
 			this.entry13.IsEditable = true;
 			this.entry13.InvisibleChar = '•';
 			this.hbox51.Add(this.entry13);
-			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.entry13]));
-			w23.Position = 1;
-			w23.Expand = false;
+			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.entry13]));
+			w27.Position = 1;
+			w27.Expand = false;
 			// Container child hbox51.Gtk.Box+BoxChild
 			this.alignment21 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
 			this.alignment21.Name = "alignment21";
 			this.hbox51.Add(this.alignment21);
-			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.alignment21]));
-			w24.Position = 2;
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.alignment21]));
+			w28.Position = 2;
 			// Container child hbox51.Gtk.Box+BoxChild
 			this.button14 = new global::Gtk.Button();
 			this.button14.CanFocus = true;
@@ -303,18 +339,18 @@ namespace Nomina
 			this.button14.UseUnderline = true;
 			this.button14.Label = global::Mono.Unix.Catalog.GetString("Editar");
 			this.hbox51.Add(this.button14);
-			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.button14]));
-			w25.Position = 3;
-			w25.Expand = false;
-			w25.Fill = false;
+			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox51[this.button14]));
+			w29.Position = 3;
+			w29.Expand = false;
+			w29.Fill = false;
 			this.vbox23.Add(this.hbox51);
-			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.hbox51]));
-			w26.Position = 2;
-			w26.Expand = false;
-			w26.Fill = false;
+			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.vbox23[this.hbox51]));
+			w30.Position = 2;
+			w30.Expand = false;
+			w30.Fill = false;
 			this.vbox22.Add(this.vbox23);
-			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.vbox22[this.vbox23]));
-			w27.Position = 3;
+			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox22[this.vbox23]));
+			w31.Position = 3;
 			this.Add(this.vbox22);
 			if ((this.Child != null))
 			{

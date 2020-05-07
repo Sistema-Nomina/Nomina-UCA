@@ -15,7 +15,9 @@ namespace Nomina
         }
 
         ListStore lsEmpleado = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String), typeof(String), typeof(String), typeof(String));
-        ListStore lsPago = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
+        ListStore lsPago = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String), typeof(String));
+        ListStore lsPago_Extras = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
+        ListStore lsPago_Deducciones = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
 
         //Método para llenar treeview
         public void llenarTreeviewEmpleado()
@@ -44,7 +46,6 @@ namespace Nomina
         //Metodo para llenar TreeView Pago
         public void llenarTreeviewPago(Int32 idPago)
         {
-            int existe = 0;
             DTPago dta = new DTPago();
             List<Nomina.Entidades.Pago> lista = new List<Nomina.Entidades.Pago>();
             lista = dta.ListarPago();
@@ -53,8 +54,8 @@ namespace Nomina
             {
                 if(idPago == a.IdEmpleado)
                 {
-                    lsPago.AppendValues(a.IdPago.ToString(), a.IdEmpleado.ToString(), a.IdMoneda.ToString(), a.Fecha_pago.ToString());
-                    existe = 1;
+                    lsPago.AppendValues(a.IdPago.ToString(), a.IdEmpleado.ToString(), a.Monto.ToString(),a.IdMoneda.ToString(), a.Fecha_pago.ToString());
+
                 }
 
             }
@@ -65,14 +66,71 @@ namespace Nomina
 
             trvPagos.AppendColumn("Id Pago", new CellRendererText(), "text", 0); 
             trvPagos.AppendColumn("Id Empleado", new CellRendererText(), "text", 1);
-            trvPagos.AppendColumn("Id Moneda", new CellRendererText(), "text", 2);
-            trvPagos.AppendColumn("Fecha Pago", new CellRendererText(), "text", 3);
+            trvPagos.AppendColumn("Monto", new CellRendererText(), "text", 2);
+            trvPagos.AppendColumn("Id Moneda", new CellRendererText(), "text", 3);
+            trvPagos.AppendColumn("Fecha Pago", new CellRendererText(), "text", 4);
 
 
 
         }
 
-        //Método para recargar TreeView
+        //Metodo para llenar TreeView Pago Extra
+        public void llenarTreeviewPago_Extra(Int32 idPago)
+        {
+            DTPago_Extra dta = new DTPago_Extra();
+            List<Nomina.Entidades.Pago_Extra> lista = new List<Nomina.Entidades.Pago_Extra>();
+            lista = dta.ListarPago_Extra();
+
+            foreach (Nomina.Entidades.Pago_Extra a in lista)
+            {
+                if (idPago == a.IdPago)
+                {
+                    lsPago_Extras.AppendValues(a.IdEmpleado_Extra.ToString(), a.IdPago.ToString(), a.IdExtra.ToString(), a.Monto.ToString());
+
+                }
+
+            }
+
+            //Crear el modelo de datos
+            trvExtras.Model = lsPago_Extras;
+
+
+            trvExtras.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
+            trvExtras.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
+            trvExtras.AppendColumn("Id Extra", new CellRendererText(), "text", 2);
+            trvExtras.AppendColumn("Monto", new CellRendererText(), "text", 3);
+
+        }
+
+        //Metodo para llenar TreeView Pago Deduccion
+        public void llenarTreeviewPago_Deduccion(Int32 idPago)
+        {
+            DTPago_Deduccion dta = new DTPago_Deduccion();
+            List<Nomina.Entidades.Pago_Deduccion> lista = new List<Nomina.Entidades.Pago_Deduccion>();
+            lista = dta.ListarPago_Deduccion();
+
+            foreach (Nomina.Entidades.Pago_Deduccion a in lista)
+            {
+                if (idPago == a.IdPago)
+                {
+                    lsPago_Deducciones.AppendValues(a.IdEmpleado_Deduccion.ToString(), a.IdPago.ToString(), a.IdDeduccion.ToString(), a.Monto.ToString());
+
+                }
+
+            }
+
+            //Crear el modelo de datos
+            trvDeducciones.Model = lsPago_Deducciones;
+
+
+            trvDeducciones.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
+            trvDeducciones.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
+            trvDeducciones.AppendColumn("Id Extra", new CellRendererText(), "text", 2);
+            trvDeducciones.AppendColumn("Monto", new CellRendererText(), "text", 3);
+
+        }
+
+        //Método para recargar TreeView pago
         public void recargarTreeViewPago()
         {
             TreeViewColumn[] listColumns;
@@ -84,10 +142,32 @@ namespace Nomina
             lsPago.Clear();
         }
 
+        //Método para recargar TreeView Pago extras
+        public void recargarTreeViewPago_Extra()
+        {
+            TreeViewColumn[] listColumns;
+            listColumns = trvExtras.Columns;
+            foreach (TreeViewColumn tvc in listColumns)
+            {
+                trvExtras.RemoveColumn(tvc);
+            }
+            lsPago_Extras.Clear();
+        }
+
+        //Método para recargar TreeView pago deducciones
+        public void recargarTreeViewPago_Deducciones()
+        {
+            TreeViewColumn[] listColumns;
+            listColumns = trvDeducciones.Columns;
+            foreach (TreeViewColumn tvc in listColumns)
+            {
+                trvDeducciones.RemoveColumn(tvc);
+            }
+            lsPago_Deducciones.Clear();
+        }
+
         protected void OnTrvEmpleadoRowActivated(object o, RowActivatedArgs args)
         {
-
-
             var model = trvEmpleado.Model;
             TreeIter iter;
 
@@ -102,10 +182,26 @@ namespace Nomina
             Int32 idempleado = Convert.ToInt32(txtIDEmpleado.Text);
 
             recargarTreeViewPago();
+            recargarTreeViewPago_Extra();
             llenarTreeviewPago(idempleado);
 
 
         }
 
+        protected void OnTrvPagosRowActivated(object o, RowActivatedArgs args)
+        {
+            var model = trvPagos.Model;
+            TreeIter iter;
+
+            model.GetIter(out iter, args.Path);
+
+            var idPago = model.GetValue(iter, 0);
+            int idpagar = Convert.ToInt32(idPago);
+
+            recargarTreeViewPago_Extra();
+            recargarTreeViewPago_Deducciones();
+            llenarTreeviewPago_Extra(idpagar);
+            llenarTreeviewPago_Deduccion(idpagar);
+        }
     }
 }

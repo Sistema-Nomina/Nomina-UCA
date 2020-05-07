@@ -145,6 +145,11 @@
     <Compile Include="Utilidades\Mensaje.cs" />
     <Compile Include="Datos\DTSucursal.cs" />
     <Compile Include="Datos\DTPago.cs" />
+    <Compile Include="Datos\DTPago_Extra.cs" />
+    <Compile Include="Datos\DTPago_Deduccion.cs" />
+    <Compile Include="Datos\DTRol.cs" />
+    <Compile Include="Datos\DTExtras.cs" />
+    <Compile Include="Datos\DTDeducciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />

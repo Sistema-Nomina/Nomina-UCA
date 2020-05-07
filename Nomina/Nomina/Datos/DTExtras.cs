@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Nomina.Datos
 {
-    public class DTPago
+    public class DTExtras
     {
-
         conexion con = new conexion();
 
-        public List<Nomina.Entidades.Pago> ListarPago()
+        public List<Nomina.Entidades.Extras> ListarExtras()
         {
-            List<Nomina.Entidades.Pago> listaPago = new List<Nomina.Entidades.Pago>();
+            List<Nomina.Entidades.Extras> listaExtras = new List<Nomina.Entidades.Extras>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Pago;");
+            sb.Append("Select * from Extra;");
 
             try
             {
@@ -24,21 +23,19 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 while (idr.Read())
                 {
-                    Nomina.Entidades.Pago a = new Nomina.Entidades.Pago()
+                    Nomina.Entidades.Extras a = new Nomina.Entidades.Extras()
                     {
-                        IdPago = Convert.ToInt32(idr["IdPago"]),
-                        IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
-                        Monto = Convert.ToDouble(idr["Monto"]),
-                        Fecha_pago = Convert.ToDateTime(idr["Fecha_Pago"]),
-                        IdMoneda = Convert.ToInt32(idr["IdMoneda"])
+                        IdExtra = Convert.ToInt32(idr["IdExtra"]),
+                        Nombre = idr["Nombre"].ToString(),
+                        Descripcion = idr["Descripcion"].ToString()
                     };
 
-                    listaPago.Add(a);
+                    listaExtras.Add(a);
 
                 }
                 idr.Close();
 
-                return listaPago;
+                return listaExtras;
             }
             catch (Exception e)
             {
@@ -49,13 +46,11 @@ namespace Nomina.Datos
             {
                 con.Close();
             }
-            return listaPago;
+            return listaExtras;
         }
 
-        public DTPago()
+        public DTExtras()
         {
         }
-
-
     }
 }

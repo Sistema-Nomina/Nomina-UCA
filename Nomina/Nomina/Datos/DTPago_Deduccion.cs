@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Nomina.Datos
 {
-    public class DTPago
+    public class DTPago_Deduccion
     {
-
         conexion con = new conexion();
 
-        public List<Nomina.Entidades.Pago> ListarPago()
+        public List<Nomina.Entidades.Pago_Deduccion> ListarPago_Deduccion()
         {
-            List<Nomina.Entidades.Pago> listaPago = new List<Nomina.Entidades.Pago>();
+            List<Nomina.Entidades.Pago_Deduccion> listaPago_Deduccion = new List<Nomina.Entidades.Pago_Deduccion>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Pago;");
+            sb.Append("Select * from Pago_Deduccion;");
 
             try
             {
@@ -24,21 +23,20 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 while (idr.Read())
                 {
-                    Nomina.Entidades.Pago a = new Nomina.Entidades.Pago()
+                    Nomina.Entidades.Pago_Deduccion a = new Nomina.Entidades.Pago_Deduccion()
                     {
+                        IdEmpleado_Deduccion = Convert.ToInt32(idr["IdEmpleado_Deduccion"]),
                         IdPago = Convert.ToInt32(idr["IdPago"]),
-                        IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
-                        Monto = Convert.ToDouble(idr["Monto"]),
-                        Fecha_pago = Convert.ToDateTime(idr["Fecha_Pago"]),
-                        IdMoneda = Convert.ToInt32(idr["IdMoneda"])
+                        IdDeduccion = Convert.ToInt32(idr["IdDeducciones"]),
+                        Monto = Convert.ToDouble(idr["Monto"])
                     };
 
-                    listaPago.Add(a);
+                    listaPago_Deduccion.Add(a);
 
                 }
                 idr.Close();
 
-                return listaPago;
+                return listaPago_Deduccion;
             }
             catch (Exception e)
             {
@@ -49,13 +47,11 @@ namespace Nomina.Datos
             {
                 con.Close();
             }
-            return listaPago;
+            return listaPago_Deduccion;
         }
 
-        public DTPago()
+        public DTPago_Deduccion()
         {
         }
-
-
     }
 }

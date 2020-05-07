@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Nomina.Datos
 {
-    public class DTPago
+    public class DTRol
     {
-
         conexion con = new conexion();
 
-        public List<Nomina.Entidades.Pago> ListarPago()
+        public List<Nomina.Entidades.Rol> ListarRol()
         {
-            List<Nomina.Entidades.Pago> listaPago = new List<Nomina.Entidades.Pago>();
+            List<Nomina.Entidades.Rol> listaRol = new List<Nomina.Entidades.Rol>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Pago;");
+            sb.Append("Select * from Rol;");
 
             try
             {
@@ -24,21 +23,18 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 while (idr.Read())
                 {
-                    Nomina.Entidades.Pago a = new Nomina.Entidades.Pago()
+                    Nomina.Entidades.Rol a = new Nomina.Entidades.Rol()
                     {
-                        IdPago = Convert.ToInt32(idr["IdPago"]),
-                        IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
-                        Monto = Convert.ToDouble(idr["Monto"]),
-                        Fecha_pago = Convert.ToDateTime(idr["Fecha_Pago"]),
-                        IdMoneda = Convert.ToInt32(idr["IdMoneda"])
+                        IdRol = Convert.ToInt32(idr["IdRol"]),
+                        Nombre = idr["Nombre"].ToString()
                     };
 
-                    listaPago.Add(a);
+                    listaRol.Add(a);
 
                 }
                 idr.Close();
 
-                return listaPago;
+                return listaRol;
             }
             catch (Exception e)
             {
@@ -49,13 +45,11 @@ namespace Nomina.Datos
             {
                 con.Close();
             }
-            return listaPago;
+            return listaRol;
         }
 
-        public DTPago()
+        public DTRol()
         {
         }
-
-
     }
 }

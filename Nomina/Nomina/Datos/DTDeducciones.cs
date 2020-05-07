@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Nomina.Datos
 {
-    public class DTPago
+    public class DTDeducciones
     {
-
         conexion con = new conexion();
 
-        public List<Nomina.Entidades.Pago> ListarPago()
+        public List<Nomina.Entidades.Deducciones> ListarDeducciones()
         {
-            List<Nomina.Entidades.Pago> listaPago = new List<Nomina.Entidades.Pago>();
+            List<Nomina.Entidades.Deducciones> listaDeduccion = new List<Nomina.Entidades.Deducciones>();
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Pago;");
+            sb.Append("Select * from Deducciones;");
 
             try
             {
@@ -24,21 +23,19 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 while (idr.Read())
                 {
-                    Nomina.Entidades.Pago a = new Nomina.Entidades.Pago()
+                    Nomina.Entidades.Deducciones a = new Nomina.Entidades.Deducciones()
                     {
-                        IdPago = Convert.ToInt32(idr["IdPago"]),
-                        IdEmpleado = Convert.ToInt32(idr["IdEmpleado"]),
-                        Monto = Convert.ToDouble(idr["Monto"]),
-                        Fecha_pago = Convert.ToDateTime(idr["Fecha_Pago"]),
-                        IdMoneda = Convert.ToInt32(idr["IdMoneda"])
+                        IdDeduccion = Convert.ToInt32(idr["IdDeducciones"]),
+                        Nombre = idr["Nombre"].ToString(),
+                        Descripcion = idr["Descripcion"].ToString()
                     };
 
-                    listaPago.Add(a);
+                    listaDeduccion.Add(a);
 
                 }
                 idr.Close();
 
-                return listaPago;
+                return listaDeduccion;
             }
             catch (Exception e)
             {
@@ -49,13 +46,11 @@ namespace Nomina.Datos
             {
                 con.Close();
             }
-            return listaPago;
+            return listaDeduccion;
         }
 
-        public DTPago()
+        public DTDeducciones()
         {
         }
-
-
     }
 }
