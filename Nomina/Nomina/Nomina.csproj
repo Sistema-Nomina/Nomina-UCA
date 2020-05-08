@@ -150,6 +150,13 @@
     <Compile Include="Datos\DTRol.cs" />
     <Compile Include="Datos\DTExtras.cs" />
     <Compile Include="Datos\DTDeducciones.cs" />
+    <Compile Include="Datos\DTEstado.cs" />
+    <Compile Include="Datos\DTCargo.cs" />
+    <Compile Include="Datos\DTTipoContrato.cs" />
+    <Compile Include="Datos\DTTurno.cs" />
+    <Compile Include="Datos\DTPlantilla.cs" />
+    <Compile Include="Datos\DTArea.cs" />
+    <Compile Include="Datos\DTMoneda.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />

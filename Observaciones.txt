@@ -1,1 +1,4 @@
 La interfaz que recupera datos es la de Visulizar_Empleado.
+
+Se hizo algunos cambios en la base de datos, como agregar un nuevo campo llamado monto a
+la tabla pago.
