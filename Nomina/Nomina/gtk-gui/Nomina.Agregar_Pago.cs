@@ -82,7 +82,7 @@ namespace Nomina
 
 		private global::Gtk.Label label19;
 
-		private global::Gtk.Entry entry10;
+		private global::Gtk.Entry txtIdPago1;
 
 		private global::Gtk.HBox hbox27;
 
@@ -401,13 +401,13 @@ namespace Nomina
 			w27.Expand = false;
 			w27.Fill = false;
 			// Container child hbox26.Gtk.Box+BoxChild
-			this.entry10 = new global::Gtk.Entry();
-			this.entry10.CanFocus = true;
-			this.entry10.Name = "entry10";
-			this.entry10.IsEditable = true;
-			this.entry10.InvisibleChar = '•';
-			this.hbox26.Add(this.entry10);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox26[this.entry10]));
+			this.txtIdPago1 = new global::Gtk.Entry();
+			this.txtIdPago1.CanFocus = true;
+			this.txtIdPago1.Name = "txtIdPago1";
+			this.txtIdPago1.IsEditable = true;
+			this.txtIdPago1.InvisibleChar = '•';
+			this.hbox26.Add(this.txtIdPago1);
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox26[this.txtIdPago1]));
 			w28.Position = 1;
 			this.hbox25.Add(this.hbox26);
 			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox25[this.hbox26]));
@@ -650,6 +650,7 @@ namespace Nomina
 			this.Show();
 			this.btnBuscar.Clicked += new global::System.EventHandler(this.OnBtnBuscarClicked);
 			this.trvEmpleado.RowActivated += new global::Gtk.RowActivatedHandler(this.OnTrvEmpleadoRowActivated);
+			this.btnGuardarPago.Clicked += new global::System.EventHandler(this.OnBtnGuardarPagoClicked);
 		}
 	}
 }

@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{0F66297E-03CF-41EA-9E75-633146F6F00E}|Default">
   <MonoDevelop.Ide.ItemProperties.Nomina PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Agregar_Pago.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Visualizar_Plantilla.cs">
     <Files>
-      <File FileName="Nomina/Agregar_Pago.cs" Line="159" Column="37" />
-      <File FileName="Nomina/Datos/DTMoneda.cs" Line="56" Column="2" />
-      <File FileName="Nomina/Datos/DTExtras.cs" Line="50" Column="10" />
-      <File FileName="Nomina/Visualizar_Pago.cs" Line="171" Column="13" />
+      <File FileName="Nomina/Visualizar_Usuario.cs" Line="17" Column="68" />
+      <File FileName="Nomina/Visualizar_Plantilla.cs" Line="14" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +11,7 @@
           <Node name="Nomina" expanded="True">
             <Node name="Nomina" expanded="True">
               <Node name="Datos" expanded="True" />
-              <Node name="Agregar_Pago.cs" selected="True" />
+              <Node name="Visualizar_Plantilla.cs" selected="True" />
             </Node>
           </Node>
         </State>

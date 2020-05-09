@@ -164,5 +164,11 @@ namespace Nomina
             this.txtIDEmpleado.Text = Convert.ToString(id);
 
         }
+
+        protected void OnBtnGuardarPagoClicked(object sender, EventArgs e)
+        {
+            DTPago dta = new DTPago();
+            txtIdPago1.Text = "" + dta.idpago();
+        }
     }
 }

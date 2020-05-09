@@ -52,6 +52,39 @@ namespace Nomina.Datos
             return listaPago;
         }
 
+        public Int32 idpago()
+        {
+            Int32 idpago = 0;
+            IDataReader idr = null;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("USE nomina;");
+            sb.Append("SELECT max(IdPago) as id from Pago;");
+
+            try
+            {
+                con.Open();
+                idr = con.Leer(CommandType.Text, sb.ToString());
+                if (idr.Read())
+                {
+                    idpago = Convert.ToInt32(idr["id"]);
+                }
+                idr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+            return idpago;
+        }
+
         public DTPago()
         {
         }

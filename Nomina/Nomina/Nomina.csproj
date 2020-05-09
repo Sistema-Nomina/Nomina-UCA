@@ -157,6 +157,7 @@
     <Compile Include="Datos\DTPlantilla.cs" />
     <Compile Include="Datos\DTArea.cs" />
     <Compile Include="Datos\DTMoneda.cs" />
+    <Compile Include="Datos\DTUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />

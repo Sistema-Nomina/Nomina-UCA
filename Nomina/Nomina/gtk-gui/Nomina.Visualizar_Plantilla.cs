@@ -42,7 +42,7 @@ namespace Nomina
 
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 
-		private global::Gtk.TreeView treeview2;
+		private global::Gtk.TreeView trvPlantillas;
 
 		protected virtual void Build()
 		{
@@ -57,7 +57,6 @@ namespace Nomina
 			this.MenAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Menú");
 			w1.Add(this.MenAction, null);
 			this.findAction = new global::Gtk.Action("findAction", null, null, "gtk-find");
-			this.findAction.ShortLabel = "";
 			w1.Add(this.findAction, null);
 			this.UIManager.InsertActionGroup(w1, 0);
 			this.AddAccelGroup(this.UIManager.AccelGroup);
@@ -178,10 +177,10 @@ namespace Nomina
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-			this.treeview2 = new global::Gtk.TreeView();
-			this.treeview2.CanFocus = true;
-			this.treeview2.Name = "treeview2";
-			this.GtkScrolledWindow.Add(this.treeview2);
+			this.trvPlantillas = new global::Gtk.TreeView();
+			this.trvPlantillas.CanFocus = true;
+			this.trvPlantillas.Name = "trvPlantillas";
+			this.GtkScrolledWindow.Add(this.trvPlantillas);
 			this.vbox4.Add(this.GtkScrolledWindow);
 			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox4[this.GtkScrolledWindow]));
 			w15.Position = 2;
