@@ -85,7 +85,7 @@ namespace Nomina
             {
                 if (idPago == a.IdPago)
                 {
-                    lsPago_Extras.AppendValues(a.IdEmpleado_Extra.ToString(), a.IdPago.ToString(), a.IdExtra.ToString(), a.Monto.ToString());
+                    lsPago_Extras.AppendValues(a.IdEmpleado_Extra.ToString(), a.IdPago.ToString(), a.NombreExtra.ToString(), a.Monto.ToString());
 
                 }
 
@@ -97,7 +97,7 @@ namespace Nomina
 
             trvExtras.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
             trvExtras.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
-            trvExtras.AppendColumn("Id Extra", new CellRendererText(), "text", 2);
+            trvExtras.AppendColumn("Nombre Extra", new CellRendererText(), "text", 2);
             trvExtras.AppendColumn("Monto", new CellRendererText(), "text", 3);
 
         }
@@ -113,7 +113,7 @@ namespace Nomina
             {
                 if (idPago == a.IdPago)
                 {
-                    lsPago_Deducciones.AppendValues(a.IdEmpleado_Deduccion.ToString(), a.IdPago.ToString(), a.IdDeduccion.ToString(), a.Monto.ToString());
+                    lsPago_Deducciones.AppendValues(a.IdEmpleado_Deduccion.ToString(), a.IdPago.ToString(), a.NombreDeduccion.ToString(), a.Monto.ToString());
 
                 }
 
@@ -123,9 +123,9 @@ namespace Nomina
             trvDeducciones.Model = lsPago_Deducciones;
 
 
-            trvDeducciones.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
+            trvDeducciones.AppendColumn("Id deduccion del pago", new CellRendererText(), "text", 0);
             trvDeducciones.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
-            trvDeducciones.AppendColumn("Id Extra", new CellRendererText(), "text", 2);
+            trvDeducciones.AppendColumn("Nombre Deduccion", new CellRendererText(), "text", 2);
             trvDeducciones.AppendColumn("Monto", new CellRendererText(), "text", 3);
 
         }
@@ -183,6 +183,7 @@ namespace Nomina
 
             recargarTreeViewPago();
             recargarTreeViewPago_Extra();
+            recargarTreeViewPago_Deducciones();
             llenarTreeviewPago(idempleado);
 
 

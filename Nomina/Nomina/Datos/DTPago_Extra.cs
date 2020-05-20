@@ -15,7 +15,7 @@ namespace Nomina.Datos
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Pago_Extra;");
+            sb.Append("select * from vistaPago_Extra;");
 
             try
             {
@@ -27,7 +27,7 @@ namespace Nomina.Datos
                     {
                         IdEmpleado_Extra = Convert.ToInt32(idr["IdEmpleado_Extra"]),
                         IdPago = Convert.ToInt32(idr["IdPago"]),
-                        IdExtra = Convert.ToInt32(idr["IdExtra"]),
+                        NombreExtra = idr["Nombre"].ToString(),
                         Monto = Convert.ToDouble(idr["Monto"])
                     };
 

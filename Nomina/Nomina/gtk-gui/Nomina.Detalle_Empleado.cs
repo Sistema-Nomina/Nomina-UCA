@@ -262,6 +262,8 @@ namespace Nomina
 			this.DefaultWidth = 797;
 			this.DefaultHeight = 294;
 			this.Show();
+			this.btnBuscarEm.Clicked += new global::System.EventHandler(this.OnBtnBuscarEmClicked);
+			this.btnBuscarS.Clicked += new global::System.EventHandler(this.OnBtnBuscarSClicked);
 		}
 	}
 }

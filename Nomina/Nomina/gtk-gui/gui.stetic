@@ -3933,6 +3933,7 @@ Inactivo</property>
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Buscar por Empresa</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="OnBtnBuscarEmClicked" />
                           </widget>
                           <packing>
                             <property name="Position">2</property>
@@ -4017,6 +4018,7 @@ Inactivo</property>
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">Buscar por sucursal</property>
                             <property name="UseUnderline">True</property>
+                            <signal name="Clicked" handler="OnBtnBuscarSClicked" />
                           </widget>
                           <packing>
                             <property name="Position">2</property>
@@ -5437,52 +5439,6 @@ Inactivo</property>
                   <placeholder />
                 </child>
                 <child>
-                  <widget class="Gtk.Entry" id="entry38">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="IsEditable">True</property>
-                    <property name="InvisibleChar">•</property>
-                  </widget>
-                  <packing>
-                    <property name="TopAttach">1</property>
-                    <property name="BottomAttach">2</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
-                    <property name="AutoSize">False</property>
-                    <property name="XOptions">Fill</property>
-                    <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
-                    <property name="XFill">True</property>
-                    <property name="XShrink">False</property>
-                    <property name="YExpand">False</property>
-                    <property name="YFill">True</property>
-                    <property name="YShrink">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Entry" id="entry39">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="IsEditable">True</property>
-                    <property name="InvisibleChar">•</property>
-                  </widget>
-                  <packing>
-                    <property name="TopAttach">2</property>
-                    <property name="BottomAttach">3</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
-                    <property name="AutoSize">True</property>
-                    <property name="XOptions">Fill</property>
-                    <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
-                    <property name="XFill">True</property>
-                    <property name="XShrink">False</property>
-                    <property name="YExpand">False</property>
-                    <property name="YFill">True</property>
-                    <property name="YShrink">False</property>
-                  </packing>
-                </child>
-                <child>
                   <widget class="Gtk.HBox" id="hbox36">
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
@@ -5493,6 +5449,7 @@ Inactivo</property>
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Guardar</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="OnBtnGuardarClicked" />
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -5600,6 +5557,52 @@ Inactivo</property>
                     <property name="TopAttach">2</property>
                     <property name="BottomAttach">3</property>
                     <property name="AutoSize">True</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="txtDescripcion">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="TopAttach">2</property>
+                    <property name="BottomAttach">3</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
+                    <property name="AutoSize">True</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="txtNombre">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="TopAttach">1</property>
+                    <property name="BottomAttach">2</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
+                    <property name="AutoSize">False</property>
                     <property name="XOptions">Fill</property>
                     <property name="YOptions">Fill</property>
                     <property name="XExpand">False</property>
@@ -5740,52 +5743,6 @@ Inactivo</property>
                   <placeholder />
                 </child>
                 <child>
-                  <widget class="Gtk.Entry" id="entry38">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="IsEditable">True</property>
-                    <property name="InvisibleChar">•</property>
-                  </widget>
-                  <packing>
-                    <property name="TopAttach">1</property>
-                    <property name="BottomAttach">2</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
-                    <property name="AutoSize">False</property>
-                    <property name="XOptions">Fill</property>
-                    <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
-                    <property name="XFill">True</property>
-                    <property name="XShrink">False</property>
-                    <property name="YExpand">False</property>
-                    <property name="YFill">True</property>
-                    <property name="YShrink">False</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="Gtk.Entry" id="entry39">
-                    <property name="MemberName" />
-                    <property name="CanFocus">True</property>
-                    <property name="IsEditable">True</property>
-                    <property name="InvisibleChar">•</property>
-                  </widget>
-                  <packing>
-                    <property name="TopAttach">2</property>
-                    <property name="BottomAttach">3</property>
-                    <property name="LeftAttach">1</property>
-                    <property name="RightAttach">2</property>
-                    <property name="AutoSize">True</property>
-                    <property name="XOptions">Fill</property>
-                    <property name="YOptions">Fill</property>
-                    <property name="XExpand">False</property>
-                    <property name="XFill">True</property>
-                    <property name="XShrink">False</property>
-                    <property name="YExpand">False</property>
-                    <property name="YFill">True</property>
-                    <property name="YShrink">False</property>
-                  </packing>
-                </child>
-                <child>
                   <widget class="Gtk.HBox" id="hbox38">
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
@@ -5796,6 +5753,7 @@ Inactivo</property>
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Guardar</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="OnBtnGuardarClicked" />
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -5914,6 +5872,52 @@ Inactivo</property>
                     <property name="YShrink">False</property>
                   </packing>
                 </child>
+                <child>
+                  <widget class="Gtk.Entry" id="txtDescripcion">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="TopAttach">2</property>
+                    <property name="BottomAttach">3</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
+                    <property name="AutoSize">True</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="txtNombre">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="TopAttach">1</property>
+                    <property name="BottomAttach">2</property>
+                    <property name="LeftAttach">1</property>
+                    <property name="RightAttach">2</property>
+                    <property name="AutoSize">False</property>
+                    <property name="XOptions">Fill</property>
+                    <property name="YOptions">Fill</property>
+                    <property name="XExpand">False</property>
+                    <property name="XFill">True</property>
+                    <property name="XShrink">False</property>
+                    <property name="YExpand">False</property>
+                    <property name="YFill">True</property>
+                    <property name="YShrink">False</property>
+                  </packing>
+                </child>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -5993,13 +5997,14 @@ Inactivo</property>
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
                     <child>
-                      <widget class="Gtk.Button" id="button11">
+                      <widget class="Gtk.Button" id="btnGuardar">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Agregar </property>
                         <property name="UseUnderline">True</property>
                         <property name="BorderWidth">9</property>
+                        <signal name="Clicked" handler="OnBtnGuardarClicked" />
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -6059,96 +6064,6 @@ Inactivo</property>
             <property name="RowSpacing">6</property>
             <property name="ColumnSpacing">6</property>
             <property name="BorderWidth">6</property>
-            <child>
-              <widget class="Gtk.Entry" id="entry43">
-                <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">•</property>
-              </widget>
-              <packing>
-                <property name="LeftAttach">1</property>
-                <property name="RightAttach">2</property>
-                <property name="AutoSize">False</property>
-                <property name="XOptions">Fill</property>
-                <property name="YOptions">Fill</property>
-                <property name="XExpand">False</property>
-                <property name="XFill">True</property>
-                <property name="XShrink">False</property>
-                <property name="YExpand">False</property>
-                <property name="YFill">True</property>
-                <property name="YShrink">False</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="Gtk.Entry" id="entry44">
-                <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">•</property>
-              </widget>
-              <packing>
-                <property name="TopAttach">1</property>
-                <property name="BottomAttach">2</property>
-                <property name="LeftAttach">1</property>
-                <property name="RightAttach">2</property>
-                <property name="AutoSize">True</property>
-                <property name="XOptions">Fill</property>
-                <property name="YOptions">Fill</property>
-                <property name="XExpand">False</property>
-                <property name="XFill">True</property>
-                <property name="XShrink">False</property>
-                <property name="YExpand">False</property>
-                <property name="YFill">True</property>
-                <property name="YShrink">False</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="Gtk.Entry" id="entry45">
-                <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">•</property>
-              </widget>
-              <packing>
-                <property name="TopAttach">2</property>
-                <property name="BottomAttach">3</property>
-                <property name="LeftAttach">1</property>
-                <property name="RightAttach">2</property>
-                <property name="AutoSize">True</property>
-                <property name="XOptions">Fill</property>
-                <property name="YOptions">Fill</property>
-                <property name="XExpand">False</property>
-                <property name="XFill">True</property>
-                <property name="XShrink">False</property>
-                <property name="YExpand">False</property>
-                <property name="YFill">True</property>
-                <property name="YShrink">False</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="Gtk.Entry" id="entry46">
-                <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="IsEditable">True</property>
-                <property name="InvisibleChar">•</property>
-              </widget>
-              <packing>
-                <property name="TopAttach">3</property>
-                <property name="BottomAttach">4</property>
-                <property name="LeftAttach">1</property>
-                <property name="RightAttach">2</property>
-                <property name="AutoSize">True</property>
-                <property name="XOptions">Fill</property>
-                <property name="YOptions">Fill</property>
-                <property name="XExpand">False</property>
-                <property name="XFill">True</property>
-                <property name="XShrink">False</property>
-                <property name="YExpand">False</property>
-                <property name="YFill">True</property>
-                <property name="YShrink">False</property>
-              </packing>
-            </child>
             <child>
               <widget class="Gtk.Label" id="label1">
                 <property name="MemberName" />
@@ -6216,6 +6131,96 @@ Inactivo</property>
               <packing>
                 <property name="TopAttach">3</property>
                 <property name="BottomAttach">4</property>
+                <property name="AutoSize">True</property>
+                <property name="XOptions">Fill</property>
+                <property name="YOptions">Fill</property>
+                <property name="XExpand">False</property>
+                <property name="XFill">True</property>
+                <property name="XShrink">False</property>
+                <property name="YExpand">False</property>
+                <property name="YFill">True</property>
+                <property name="YShrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Entry" id="txtDireccion">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="IsEditable">True</property>
+                <property name="InvisibleChar">•</property>
+              </widget>
+              <packing>
+                <property name="TopAttach">3</property>
+                <property name="BottomAttach">4</property>
+                <property name="LeftAttach">1</property>
+                <property name="RightAttach">2</property>
+                <property name="AutoSize">True</property>
+                <property name="XOptions">Fill</property>
+                <property name="YOptions">Fill</property>
+                <property name="XExpand">False</property>
+                <property name="XFill">True</property>
+                <property name="XShrink">False</property>
+                <property name="YExpand">False</property>
+                <property name="YFill">True</property>
+                <property name="YShrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Entry" id="txtNombre">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="IsEditable">True</property>
+                <property name="InvisibleChar">•</property>
+              </widget>
+              <packing>
+                <property name="TopAttach">1</property>
+                <property name="BottomAttach">2</property>
+                <property name="LeftAttach">1</property>
+                <property name="RightAttach">2</property>
+                <property name="AutoSize">True</property>
+                <property name="XOptions">Fill</property>
+                <property name="YOptions">Fill</property>
+                <property name="XExpand">False</property>
+                <property name="XFill">True</property>
+                <property name="XShrink">False</property>
+                <property name="YExpand">False</property>
+                <property name="YFill">True</property>
+                <property name="YShrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Entry" id="txtNumeroRUC">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="IsEditable">True</property>
+                <property name="InvisibleChar">•</property>
+              </widget>
+              <packing>
+                <property name="LeftAttach">1</property>
+                <property name="RightAttach">2</property>
+                <property name="AutoSize">False</property>
+                <property name="XOptions">Fill</property>
+                <property name="YOptions">Fill</property>
+                <property name="XExpand">False</property>
+                <property name="XFill">True</property>
+                <property name="XShrink">False</property>
+                <property name="YExpand">False</property>
+                <property name="YFill">True</property>
+                <property name="YShrink">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Entry" id="txtTelefono">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="IsEditable">True</property>
+                <property name="InvisibleChar">•</property>
+              </widget>
+              <packing>
+                <property name="TopAttach">2</property>
+                <property name="BottomAttach">3</property>
+                <property name="LeftAttach">1</property>
+                <property name="RightAttach">2</property>
                 <property name="AutoSize">True</property>
                 <property name="XOptions">Fill</property>
                 <property name="YOptions">Fill</property>

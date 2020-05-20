@@ -16,7 +16,7 @@ namespace Nomina.Datos
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Empleado;");
+            sb.Append("select * from obtenerEmp_Suc_Empre;");
 
             try
             {
@@ -33,6 +33,9 @@ namespace Nomina.Datos
                         SalarioEmpleado = Convert.ToDouble(idr["SalarioEmpleado"]),
                         Fecha_contratacion = Convert.ToDateTime(idr["Fecha_Contratacion"]),
                         Direccion = idr["Direccion"].ToString(),
+                        NombreEmpresa = idr["NombreEm"].ToString(),
+                        NombreSucursal = idr["NombreS"].ToString(),
+
                     };
 
                     listaEmpleado.Add(a);

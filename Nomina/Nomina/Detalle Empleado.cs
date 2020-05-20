@@ -93,5 +93,89 @@ namespace Nomina
             //Crear el modelo de datos
             cmbEmpresa.Model = lsEmpresa;
         }
+
+        public void llenarTreeviewPorEmpresa(string nombreEmpresa)
+        {
+            double salario = 0, deduccion = 0;
+            DTEmpleado dta = new DTEmpleado();
+            List<Nomina.Entidades.Empleado> lista = new List<Nomina.Entidades.Empleado>();
+            lista = dta.ListarEmpleado();
+
+            foreach (Nomina.Entidades.Empleado a in lista)
+            {
+                if (a.NombreEmpresa==nombreEmpresa)
+                {
+                    salario = 0;
+                    deduccion = 0;
+                    deduccion = a.SalarioEmpleado * 0.0625;
+                    salario = a.SalarioEmpleado - deduccion;
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                }
+
+            }
+
+            //Crear el modelo de datos
+            trvEmpleado.Model = ls;
+
+            trvEmpleado.AppendColumn("ID", new CellRendererText(), "text", 0);
+            trvEmpleado.AppendColumn("Nombre", new CellRendererText(), "text", 1);
+            trvEmpleado.AppendColumn("Apellido", new CellRendererText(), "text", 2);
+            trvEmpleado.AppendColumn("Cedula", new CellRendererText(), "text", 3);
+            trvEmpleado.AppendColumn("Salario C$", new CellRendererText(), "text", 4);
+            trvEmpleado.AppendColumn("Salario INSS C$", new CellRendererText(), "text", 5);
+            trvEmpleado.AppendColumn("Fecha Contratacion", new CellRendererText(), "text", 6);
+            trvEmpleado.AppendColumn("Direccion", new CellRendererText(), "text", 7);
+        }
+
+        public void llenarTreeviewPorSucursal(string nombreSucursal)
+        {
+            double salario = 0, deduccion = 0;
+            DTEmpleado dta = new DTEmpleado();
+            List<Nomina.Entidades.Empleado> lista = new List<Nomina.Entidades.Empleado>();
+            lista = dta.ListarEmpleado();
+
+            foreach (Nomina.Entidades.Empleado a in lista)
+            {
+                if (a.NombreSucursal == nombreSucursal)
+                {
+                    salario = 0;
+                    deduccion = 0;
+                    deduccion = a.SalarioEmpleado * 0.0625;
+                    salario = a.SalarioEmpleado - deduccion;
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                }
+
+            }
+
+            //Crear el modelo de datos
+            trvEmpleado.Model = ls;
+
+            trvEmpleado.AppendColumn("ID", new CellRendererText(), "text", 0);
+            trvEmpleado.AppendColumn("Nombre", new CellRendererText(), "text", 1);
+            trvEmpleado.AppendColumn("Apellido", new CellRendererText(), "text", 2);
+            trvEmpleado.AppendColumn("Cedula", new CellRendererText(), "text", 3);
+            trvEmpleado.AppendColumn("Salario C$", new CellRendererText(), "text", 4);
+            trvEmpleado.AppendColumn("Salario INSS C$", new CellRendererText(), "text", 5);
+            trvEmpleado.AppendColumn("Fecha Contratacion", new CellRendererText(), "text", 6);
+            trvEmpleado.AppendColumn("Direccion", new CellRendererText(), "text", 7);
+        }
+
+        protected void OnBtnBuscarEmClicked(object sender, EventArgs e)
+        {
+            //int idEmpresa = 0;
+            string nombreEmpresa = cmbEmpresa.ActiveText;
+            recargarTreeView();
+            llenarTreeviewPorEmpresa(nombreEmpresa);
+
+
+        }
+
+        protected void OnBtnBuscarSClicked(object sender, EventArgs e)
+        {
+            string nombreSucursal = cmbSucursal.ActiveText;
+            recargarTreeView();
+            llenarTreeviewPorSucursal(nombreSucursal);
+
+        }
     }
 }

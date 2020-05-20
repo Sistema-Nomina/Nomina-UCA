@@ -30,10 +30,6 @@ namespace Nomina
 
 		private global::Gtk.Table table8;
 
-		private global::Gtk.Entry entry38;
-
-		private global::Gtk.Entry entry39;
-
 		private global::Gtk.HBox hbox36;
 
 		private global::Gtk.Button btnGuardar;
@@ -47,6 +43,10 @@ namespace Nomina
 		private global::Gtk.Label label51;
 
 		private global::Gtk.Label label52;
+
+		private global::Gtk.Entry txtDescripcion;
+
+		private global::Gtk.Entry txtNombre;
 
 		private global::Gtk.Alignment alignment15;
 
@@ -125,34 +125,6 @@ namespace Nomina
 			this.table8.RowSpacing = ((uint)(6));
 			this.table8.ColumnSpacing = ((uint)(6));
 			// Container child table8.Gtk.Table+TableChild
-			this.entry38 = new global::Gtk.Entry();
-			this.entry38.CanFocus = true;
-			this.entry38.Name = "entry38";
-			this.entry38.IsEditable = true;
-			this.entry38.InvisibleChar = '•';
-			this.table8.Add(this.entry38);
-			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table8[this.entry38]));
-			w8.TopAttach = ((uint)(1));
-			w8.BottomAttach = ((uint)(2));
-			w8.LeftAttach = ((uint)(1));
-			w8.RightAttach = ((uint)(2));
-			w8.XOptions = ((global::Gtk.AttachOptions)(4));
-			w8.YOptions = ((global::Gtk.AttachOptions)(4));
-			// Container child table8.Gtk.Table+TableChild
-			this.entry39 = new global::Gtk.Entry();
-			this.entry39.CanFocus = true;
-			this.entry39.Name = "entry39";
-			this.entry39.IsEditable = true;
-			this.entry39.InvisibleChar = '•';
-			this.table8.Add(this.entry39);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table8[this.entry39]));
-			w9.TopAttach = ((uint)(2));
-			w9.BottomAttach = ((uint)(3));
-			w9.LeftAttach = ((uint)(1));
-			w9.RightAttach = ((uint)(2));
-			w9.XOptions = ((global::Gtk.AttachOptions)(4));
-			w9.YOptions = ((global::Gtk.AttachOptions)(4));
-			// Container child table8.Gtk.Table+TableChild
 			this.hbox36 = new global::Gtk.HBox();
 			this.hbox36.Name = "hbox36";
 			this.hbox36.Spacing = 6;
@@ -163,63 +135,91 @@ namespace Nomina
 			this.btnGuardar.UseUnderline = true;
 			this.btnGuardar.Label = global::Mono.Unix.Catalog.GetString("Guardar");
 			this.hbox36.Add(this.btnGuardar);
-			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox36[this.btnGuardar]));
-			w10.Position = 0;
-			w10.Fill = false;
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox36[this.btnGuardar]));
+			w8.Position = 0;
+			w8.Fill = false;
 			this.table8.Add(this.hbox36);
-			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.table8[this.hbox36]));
-			w11.TopAttach = ((uint)(1));
-			w11.BottomAttach = ((uint)(2));
-			w11.LeftAttach = ((uint)(2));
-			w11.RightAttach = ((uint)(3));
-			w11.XOptions = ((global::Gtk.AttachOptions)(1));
-			w11.YOptions = ((global::Gtk.AttachOptions)(1));
+			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table8[this.hbox36]));
+			w9.TopAttach = ((uint)(1));
+			w9.BottomAttach = ((uint)(2));
+			w9.LeftAttach = ((uint)(2));
+			w9.RightAttach = ((uint)(3));
+			w9.XOptions = ((global::Gtk.AttachOptions)(1));
+			w9.YOptions = ((global::Gtk.AttachOptions)(1));
 			// Container child table8.Gtk.Table+TableChild
 			this.hseparator7 = new global::Gtk.HSeparator();
 			this.hseparator7.Name = "hseparator7";
 			this.table8.Add(this.hseparator7);
-			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.table8[this.hseparator7]));
-			w12.LeftAttach = ((uint)(1));
-			w12.RightAttach = ((uint)(2));
-			w12.XOptions = ((global::Gtk.AttachOptions)(4));
-			w12.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.table8[this.hseparator7]));
+			w10.LeftAttach = ((uint)(1));
+			w10.RightAttach = ((uint)(2));
+			w10.XOptions = ((global::Gtk.AttachOptions)(4));
+			w10.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table8.Gtk.Table+TableChild
 			this.hseparator8 = new global::Gtk.HSeparator();
 			this.hseparator8.Name = "hseparator8";
 			this.table8.Add(this.hseparator8);
-			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table8[this.hseparator8]));
-			w13.LeftAttach = ((uint)(2));
-			w13.RightAttach = ((uint)(3));
-			w13.XOptions = ((global::Gtk.AttachOptions)(4));
-			w13.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.table8[this.hseparator8]));
+			w11.LeftAttach = ((uint)(2));
+			w11.RightAttach = ((uint)(3));
+			w11.XOptions = ((global::Gtk.AttachOptions)(4));
+			w11.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table8.Gtk.Table+TableChild
 			this.label50 = new global::Gtk.Label();
 			this.label50.Name = "label50";
 			this.label50.LabelProp = global::Mono.Unix.Catalog.GetString("Agregar Extras");
 			this.table8.Add(this.label50);
-			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table8[this.label50]));
-			w14.XOptions = ((global::Gtk.AttachOptions)(4));
-			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.table8[this.label50]));
+			w12.XOptions = ((global::Gtk.AttachOptions)(4));
+			w12.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table8.Gtk.Table+TableChild
 			this.label51 = new global::Gtk.Label();
 			this.label51.Name = "label51";
 			this.label51.Xalign = 1F;
 			this.label51.LabelProp = global::Mono.Unix.Catalog.GetString("Nombre:");
 			this.table8.Add(this.label51);
-			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table8[this.label51]));
-			w15.TopAttach = ((uint)(1));
-			w15.BottomAttach = ((uint)(2));
-			w15.XOptions = ((global::Gtk.AttachOptions)(4));
-			w15.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table8[this.label51]));
+			w13.TopAttach = ((uint)(1));
+			w13.BottomAttach = ((uint)(2));
+			w13.XOptions = ((global::Gtk.AttachOptions)(4));
+			w13.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table8.Gtk.Table+TableChild
 			this.label52 = new global::Gtk.Label();
 			this.label52.Name = "label52";
 			this.label52.Xalign = 1F;
 			this.label52.LabelProp = global::Mono.Unix.Catalog.GetString("Descripción:");
 			this.table8.Add(this.label52);
-			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table8[this.label52]));
-			w16.TopAttach = ((uint)(2));
-			w16.BottomAttach = ((uint)(3));
+			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table8[this.label52]));
+			w14.TopAttach = ((uint)(2));
+			w14.BottomAttach = ((uint)(3));
+			w14.XOptions = ((global::Gtk.AttachOptions)(4));
+			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child table8.Gtk.Table+TableChild
+			this.txtDescripcion = new global::Gtk.Entry();
+			this.txtDescripcion.CanFocus = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.IsEditable = true;
+			this.txtDescripcion.InvisibleChar = '•';
+			this.table8.Add(this.txtDescripcion);
+			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table8[this.txtDescripcion]));
+			w15.TopAttach = ((uint)(2));
+			w15.BottomAttach = ((uint)(3));
+			w15.LeftAttach = ((uint)(1));
+			w15.RightAttach = ((uint)(2));
+			w15.XOptions = ((global::Gtk.AttachOptions)(4));
+			w15.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child table8.Gtk.Table+TableChild
+			this.txtNombre = new global::Gtk.Entry();
+			this.txtNombre.CanFocus = true;
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.IsEditable = true;
+			this.txtNombre.InvisibleChar = '•';
+			this.table8.Add(this.txtNombre);
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table8[this.txtNombre]));
+			w16.TopAttach = ((uint)(1));
+			w16.BottomAttach = ((uint)(2));
+			w16.LeftAttach = ((uint)(1));
+			w16.RightAttach = ((uint)(2));
 			w16.XOptions = ((global::Gtk.AttachOptions)(4));
 			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.vbox13.Add(this.table8);
@@ -244,6 +244,7 @@ namespace Nomina
 			this.DefaultWidth = 490;
 			this.DefaultHeight = 318;
 			this.Show();
+			this.btnGuardar.Clicked += new global::System.EventHandler(this.OnBtnGuardarClicked);
 		}
 	}
 }

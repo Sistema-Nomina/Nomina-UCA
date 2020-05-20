@@ -49,6 +49,33 @@ namespace Nomina.Datos
             }
             return listaEmpresa;
         }
+
+        public Int32 guardarEmpresa(Entidades.Empresa a)
+        {
+            int guardado = 0;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Insert into nomina.Empresa(NumeroRUC, Nombre, Telefono, Direccion) Values("+a.NumeroRuc+ ",'" + a.Nombre + "','" + a.Telefono + "','"+a.Direccion+ "');");
+            /*sb.Append("(Nombre, Extension, NumeroRUC)");
+            sb.Append("VALUES('"+ a.Nombre + "','" + a.Extension + "'," + a.NumeroRuc + ";");*/
+
+            try
+            {
+                con.Open();
+                guardado = con.Ejecutar(CommandType.Text, sb.ToString());
+                return guardado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DTEmpresa()
         {
         }

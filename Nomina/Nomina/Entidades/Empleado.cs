@@ -21,6 +21,9 @@ namespace Nomina.Entidades
         private int idContrato;
         private int idSucursal;
         private int idCargo;
+        string nombreSucursal;
+        string nombreEmpresa;
+
 
         public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -40,6 +43,8 @@ namespace Nomina.Entidades
         public int IdContrato { get => idContrato; set => idContrato = value; }
         public int IdSucursal { get => idSucursal; set => idSucursal = value; }
         public int IdCargo { get => idCargo; set => idCargo = value; }
+        public string NombreSucursal { get => nombreSucursal; set => nombreSucursal = value; }
+        public string NombreEmpresa { get => nombreEmpresa; set => nombreEmpresa = value; }
 
         public Empleado()
         {

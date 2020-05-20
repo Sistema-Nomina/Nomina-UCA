@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using Gtk;
 using Nomina.Datos;
+using Nomina.Utilidades;
 
 namespace Nomina
 {
     public partial class Agregar_Extras : Gtk.Window
     {
+        Mensaje _msj = new Mensaje();
         public Agregar_Extras() :
                 base(Gtk.WindowType.Toplevel)
         {
@@ -37,5 +39,40 @@ namespace Nomina
 
         }
 
+        public void recargarTreeView()
+        {
+            TreeViewColumn[] listColumns;
+            listColumns = trvExtras.Columns;
+            foreach (TreeViewColumn tvc in listColumns)
+            {
+                trvExtras.RemoveColumn(tvc);
+            }
+            ls.Clear();
+        }
+
+        protected void OnBtnGuardarClicked(object sender, EventArgs e)
+        {
+            int guardado = 0;
+            String msj = "";
+            Entidades.Extras act = new Entidades.Extras();
+            DTExtras dT = new DTExtras();
+
+            act.Nombre = this.txtNombre.Text;
+            act.Descripcion = this.txtDescripcion.Text;
+            guardado = dT.guardarExtras(act);
+
+            if (guardado > 0)
+            {
+                msj = "Extra guardada con éxito!";
+                _msj.ShowMessage(null, "Éxito", msj);
+                recargarTreeView();
+                llenarTreeview();
+            }
+            else
+            {
+                msj = "Error al Guardar";
+                _msj.ShowMessage(null, "Error", msj);
+            }
+        }
     }
 }
