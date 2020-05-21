@@ -36,11 +36,6 @@ public partial class MainWindow : Gtk.Window
         Nomina.Visualizar_Usuario vs = new Nomina.Visualizar_Usuario();
         vs.Show();
     }
-    protected void OnEliminarActionActivated(object sender, EventArgs e)
-    {
-        Nomina.Eliminar_Usuario el = new Nomina.Eliminar_Usuario();
-        el.Show();
-    }
 
     protected void OnAgregarAction1Activated(object sender, EventArgs e)
     {
@@ -54,11 +49,6 @@ public partial class MainWindow : Gtk.Window
         ve.Show();
     }
 
-    protected void OnBorrarActionActivated(object sender, EventArgs e)
-    {
-        Nomina.Eliminar_Empleado em = new Nomina.Eliminar_Empleado();
-        em.Show();
-    }
 
     protected void OnVisualizarAction7Activated(object sender, EventArgs e)
     {

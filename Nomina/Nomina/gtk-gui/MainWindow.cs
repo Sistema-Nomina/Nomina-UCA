@@ -271,28 +271,26 @@ public partial class MainWindow
 		this.UIManager.AddUiFromString("<ui><menubar name=\'menubar1\'><menu name=\'InicioAction\' action=\'InicioAction\'><men" +
 				"uitem name=\'PanelAction\' action=\'PanelAction\'/></menu><menu name=\'UsuarioAction\'" +
 				" action=\'UsuarioAction\'><menuitem name=\'AgregarAction\' action=\'AgregarAction\'/><" +
-				"menuitem name=\'VisualizarAction\' action=\'VisualizarAction\'/><menuitem name=\'Modi" +
-				"ficarAction\' action=\'ModificarAction\'/><menuitem name=\'EliminarAction\' action=\'E" +
-				"liminarAction\'/></menu><menu name=\'EmpleadoAction\' action=\'EmpleadoAction\'><menu" +
-				"item name=\'AgregarAction1\' action=\'AgregarAction1\'/><menuitem name=\'VisualizarAc" +
-				"tion1\' action=\'VisualizarAction1\'/><menuitem name=\'BorrarAction\' action=\'BorrarA" +
-				"ction\'/></menu><menu name=\'NminaAction\' action=\'NminaAction\'><menu name=\'Opcione" +
-				"sAction\' action=\'OpcionesAction\'><menu name=\'PlantillasAction\' action=\'Plantilla" +
-				"sAction\'><menuitem name=\'VisualizarAction7\' action=\'VisualizarAction7\'/><menuite" +
-				"m name=\'DetalleDeEmpleadoAction1\' action=\'DetalleDeEmpleadoAction1\'/></menu><men" +
-				"u name=\'PagosAction\' action=\'PagosAction\'><menuitem name=\'AgregarAction4\' action" +
-				"=\'AgregarAction4\'/><menuitem name=\'VisualizarAction5\' action=\'VisualizarAction5\'" +
-				"/></menu><menu name=\'ExtrasAction\' action=\'ExtrasAction\'><menuitem name=\'Agregar" +
-				"Action5\' action=\'AgregarAction5\'/></menu><menu name=\'DeduccionesAction\' action=\'" +
-				"DeduccionesAction\'><menuitem name=\'AgregarAction6\' action=\'AgregarAction6\'/></me" +
-				"nu></menu></menu><menu name=\'ConfiguracinAction\' action=\'ConfiguracinAction\'><me" +
-				"nu name=\'EmpresaAction\' action=\'EmpresaAction\'><menuitem name=\'AgregarAction2\' a" +
-				"ction=\'AgregarAction2\'/><menuitem name=\'VisualizarAction3\' action=\'VisualizarAct" +
-				"ion3\'/><menuitem name=\'EditarAction1\' action=\'EditarAction1\'/></menu><menu name=" +
-				"\'SucursalAction\' action=\'SucursalAction\'><menuitem name=\'AgregarAction3\' action=" +
-				"\'AgregarAction3\'/><menuitem name=\'VisualizarAction4\' action=\'VisualizarAction4\'/" +
-				"><menuitem name=\'EditarAction2\' action=\'EditarAction2\'/></menu></menu><menu name" +
-				"=\'AyudaAction\' action=\'AyudaAction\'/></menubar></ui>");
+				"menuitem name=\'VisualizarAction\' action=\'VisualizarAction\'/></menu><menu name=\'E" +
+				"mpleadoAction\' action=\'EmpleadoAction\'><menuitem name=\'AgregarAction1\' action=\'A" +
+				"gregarAction1\'/><menuitem name=\'VisualizarAction1\' action=\'VisualizarAction1\'/><" +
+				"/menu><menu name=\'NminaAction\' action=\'NminaAction\'><menu name=\'OpcionesAction\' " +
+				"action=\'OpcionesAction\'><menu name=\'PlantillasAction\' action=\'PlantillasAction\'>" +
+				"<menuitem name=\'VisualizarAction7\' action=\'VisualizarAction7\'/><menuitem name=\'D" +
+				"etalleDeEmpleadoAction1\' action=\'DetalleDeEmpleadoAction1\'/></menu><menu name=\'P" +
+				"agosAction\' action=\'PagosAction\'><menuitem name=\'AgregarAction4\' action=\'Agregar" +
+				"Action4\'/><menuitem name=\'VisualizarAction5\' action=\'VisualizarAction5\'/></menu>" +
+				"<menu name=\'ExtrasAction\' action=\'ExtrasAction\'><menuitem name=\'AgregarAction5\' " +
+				"action=\'AgregarAction5\'/></menu><menu name=\'DeduccionesAction\' action=\'Deduccion" +
+				"esAction\'><menuitem name=\'AgregarAction6\' action=\'AgregarAction6\'/></menu></menu" +
+				"></menu><menu name=\'ConfiguracinAction\' action=\'ConfiguracinAction\'><menu name=\'" +
+				"EmpresaAction\' action=\'EmpresaAction\'><menuitem name=\'AgregarAction2\' action=\'Ag" +
+				"regarAction2\'/><menuitem name=\'VisualizarAction3\' action=\'VisualizarAction3\'/><m" +
+				"enuitem name=\'EditarAction1\' action=\'EditarAction1\'/></menu><menu name=\'Sucursal" +
+				"Action\' action=\'SucursalAction\'><menuitem name=\'AgregarAction3\' action=\'AgregarA" +
+				"ction3\'/><menuitem name=\'VisualizarAction4\' action=\'VisualizarAction4\'/><menuite" +
+				"m name=\'EditarAction2\' action=\'EditarAction2\'/></menu></menu><menu name=\'AyudaAc" +
+				"tion\' action=\'AyudaAction\'/></menubar></ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add(this.menubar1);
@@ -363,10 +361,10 @@ public partial class MainWindow
 		this.AgregarAction.Activated += new global::System.EventHandler(this.OnAgregarActionActivated);
 		this.VisualizarAction.Activated += new global::System.EventHandler(this.OnVisualizarActionActivated);
 		this.ModificarAction.Activated += new global::System.EventHandler(this.OnModificarActionActivated);
-		this.EliminarAction.Activated += new global::System.EventHandler(this.OnEliminarActionActivated);
+		//this.EliminarAction.Activated += new global::System.EventHandler(this.OnEliminarActionActivated);
 		this.AgregarAction1.Activated += new global::System.EventHandler(this.OnAgregarAction1Activated);
 		this.VisualizarAction1.Activated += new global::System.EventHandler(this.OnVisualizarAction1Activated);
-		this.BorrarAction.Activated += new global::System.EventHandler(this.OnBorrarActionActivated);
+		//this.BorrarAction.Activated += new global::System.EventHandler(this.OnBorrarActionActivated);
 		this.AgregarAction2.Activated += new global::System.EventHandler(this.OnAgregarAction2Activated);
 		this.VisualizarAction3.Activated += new global::System.EventHandler(this.OnVisualizarAction3Activated);
 		this.EditarAction1.Activated += new global::System.EventHandler(this.OnEditarAction1Activated);

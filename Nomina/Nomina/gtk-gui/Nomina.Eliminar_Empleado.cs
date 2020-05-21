@@ -66,7 +66,7 @@ namespace Nomina
 
 		protected virtual void Build()
 		{
-			global::Stetic.Gui.Initialize(this);
+			//global::Stetic.Gui.Initialize(this);
 			// Widget Nomina.Eliminar_Empleado
 			this.UIManager = new global::Gtk.UIManager();
 			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
@@ -80,11 +80,11 @@ namespace Nomina
 			this.deleteAction.ShortLabel = "";
 			w1.Add(this.deleteAction, null);
 			this.UIManager.InsertActionGroup(w1, 0);
-			this.AddAccelGroup(this.UIManager.AccelGroup);
+			/*this.AddAccelGroup(this.UIManager.AccelGroup);
 			this.Name = "Nomina.Eliminar_Empleado";
 			this.Title = global::Mono.Unix.Catalog.GetString("Eliminar_Empleado");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
-			// Container child Nomina.Eliminar_Empleado.Gtk.Container+ContainerChild
+			*/// Container child Nomina.Eliminar_Empleado.Gtk.Container+ContainerChild
 			this.vbox3 = new global::Gtk.VBox();
 			this.vbox3.Name = "vbox3";
 			this.vbox3.Spacing = 6;
@@ -339,14 +339,14 @@ namespace Nomina
 			w25.Position = 2;
 			w25.Expand = false;
 			w25.Fill = false;
-			this.Add(this.vbox3);
+			/*this.Add(this.vbox3);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 345;
 			this.DefaultHeight = 334;
-			this.Show();
+			this.Show();*/
 		}
 	}
 }

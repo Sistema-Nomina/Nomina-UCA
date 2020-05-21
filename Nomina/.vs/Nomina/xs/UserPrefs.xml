@@ -1,11 +1,8 @@
 ﻿<Properties StartupConfiguration="{0F66297E-03CF-41EA-9E75-633146F6F00E}|Default">
   <MonoDevelop.Ide.ItemProperties.Nomina PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Agregar_Empresa.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/MainWindow.cs">
     <Files>
-      <File FileName="Nomina/Agregar_Deducciones.cs" Line="55" Column="13" />
-      <File FileName="Nomina/Datos/DTDeducciones.cs" Line="52" Column="9" />
-      <File FileName="Nomina/Datos/DTEmpresa.cs" Line="57" Column="114" />
-      <File FileName="Nomina/Agregar_Empresa.cs" Line="31" Column="31" />
+      <File FileName="Nomina/MainWindow.cs" Line="51" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +12,7 @@
               <Node name="Datos" expanded="True" />
               <Node name="Entidades" expanded="True" />
               <Node name="Utilidades" expanded="True" />
-              <Node name="Agregar_Empresa.cs" selected="True" />
+              <Node name="MainWindow.cs" selected="True" />
             </Node>
           </Node>
         </State>

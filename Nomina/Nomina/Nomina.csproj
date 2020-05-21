@@ -107,13 +107,11 @@
     <Compile Include="gtk-gui\Nomina.Modificar_Usuario.cs" />
     <Compile Include="Visualizar_Usuario.cs" />
     <Compile Include="gtk-gui\Nomina.Visualizar_Usuario.cs" />
-    <Compile Include="Eliminar_Usuario.cs" />
     <Compile Include="gtk-gui\Nomina.Eliminar_Usuario.cs" />
     <Compile Include="Agregar_Empleado.cs" />
     <Compile Include="gtk-gui\Nomina.Agregar_Empleado.cs" />
     <Compile Include="Visualizar_Empleado.cs" />
     <Compile Include="gtk-gui\Nomina.Visualizar_Empleado.cs" />
-    <Compile Include="Eliminar_Empleado.cs" />
     <Compile Include="gtk-gui\Nomina.Eliminar_Empleado.cs" />
     <Compile Include="Visualizar_Plantilla.cs" />
     <Compile Include="gtk-gui\Nomina.Visualizar_Plantilla.cs" />
@@ -158,6 +156,7 @@
     <Compile Include="Datos\DTArea.cs" />
     <Compile Include="Datos\DTMoneda.cs" />
     <Compile Include="Datos\DTUsuario.cs" />
+    <Compile Include="Datos\DTUsuario_Rol.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />
