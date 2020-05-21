@@ -54,7 +54,7 @@ namespace Nomina.Datos
 
         public Int32 idpago()
         {
-            Int32 idpago = 0;
+            Int32 idPago = 0;
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
@@ -66,7 +66,7 @@ namespace Nomina.Datos
                 idr = con.Leer(CommandType.Text, sb.ToString());
                 if (idr.Read())
                 {
-                    idpago = Convert.ToInt32(idr["id"]);
+                    idPago = Convert.ToInt32(idr["id"]);
                 }
                 idr.Close();
 
@@ -82,7 +82,7 @@ namespace Nomina.Datos
             }
 
 
-            return idpago;
+            return idPago;
         }
 
         public DTPago()

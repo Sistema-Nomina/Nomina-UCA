@@ -157,6 +157,8 @@
     <Compile Include="Datos\DTMoneda.cs" />
     <Compile Include="Datos\DTUsuario.cs" />
     <Compile Include="Datos\DTUsuario_Rol.cs" />
+    <Compile Include="Utilidades\calcularDeduccion.cs" />
+    <Compile Include="Datos\DTContrato.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\" />

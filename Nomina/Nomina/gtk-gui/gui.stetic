@@ -1896,7 +1896,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry1">
+                          <widget class="Gtk.Entry" id="txtNombre">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2024,7 +2024,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry2">
+                          <widget class="Gtk.Entry" id="txtApellidos">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2067,7 +2067,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry3">
+                          <widget class="Gtk.Entry" id="txtCedula">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2109,7 +2109,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry4">
+                          <widget class="Gtk.Entry" id="txtNivelEstudio">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2154,10 +2154,10 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry7">
+                          <widget class="Gtk.Entry" id="txtCorreo">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
-                            <property name="IsEditable">True</property>
+                            <property name="IsEditable">False</property>
                             <property name="InvisibleChar">•</property>
                           </widget>
                           <packing>
@@ -2196,7 +2196,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry8">
+                          <widget class="Gtk.Entry" id="txtDireccion">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2238,7 +2238,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry9">
+                          <widget class="Gtk.Entry" id="txtSalario">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2280,7 +2280,7 @@ Inactivo</property>
                           </packing>
                         </child>
                         <child>
-                          <widget class="Gtk.Entry" id="entry10">
+                          <widget class="Gtk.Entry" id="txtFecha">
                             <property name="MemberName" />
                             <property name="CanFocus">True</property>
                             <property name="IsEditable">True</property>
@@ -2374,7 +2374,7 @@ Inactivo</property>
                             <property name="MemberName" />
                             <property name="Spacing">6</property>
                             <child>
-                              <widget class="Gtk.Entry" id="entry5">
+                              <widget class="Gtk.Entry" id="txtInss">
                                 <property name="MemberName" />
                                 <property name="CanFocus">True</property>
                                 <property name="IsEditable">True</property>
@@ -2463,7 +2463,7 @@ Inactivo</property>
                                       </packing>
                                     </child>
                                     <child>
-                                      <widget class="Gtk.Entry" id="entry6">
+                                      <widget class="Gtk.Entry" id="txtDescripcion">
                                         <property name="MemberName" />
                                         <property name="CanFocus">True</property>
                                         <property name="IsEditable">True</property>
@@ -2862,12 +2862,13 @@ Inactivo</property>
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Button" id="button3">
+              <widget class="Gtk.Button" id="btnGuardar">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Guardar</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnBtnGuardarClicked" />
               </widget>
               <packing>
                 <property name="Position">2</property>

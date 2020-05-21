@@ -26,7 +26,7 @@ namespace Nomina
 
 		private global::Gtk.Label label1;
 
-		private global::Gtk.Entry entry1;
+		private global::Gtk.Entry txtNombre;
 
 		private global::Gtk.HBox hbox12;
 
@@ -44,43 +44,43 @@ namespace Nomina
 
 		private global::Gtk.Label label3;
 
-		private global::Gtk.Entry entry2;
+		private global::Gtk.Entry txtApellidos;
 
 		private global::Gtk.HBox hbox4;
 
 		private global::Gtk.Label label5;
 
-		private global::Gtk.Entry entry3;
+		private global::Gtk.Entry txtCedula;
 
 		private global::Gtk.HBox hbox5;
 
 		private global::Gtk.Label label7;
 
-		private global::Gtk.Entry entry4;
+		private global::Gtk.Entry txtNivelEstudio;
 
 		private global::Gtk.HBox hbox6;
 
 		private global::Gtk.Label label10;
 
-		private global::Gtk.Entry entry7;
+		private global::Gtk.Entry txtCorreo;
 
 		private global::Gtk.HBox hbox7;
 
 		private global::Gtk.Label label11;
 
-		private global::Gtk.Entry entry8;
+		private global::Gtk.Entry txtDireccion;
 
 		private global::Gtk.HBox hbox8;
 
 		private global::Gtk.Label label12;
 
-		private global::Gtk.Entry entry9;
+		private global::Gtk.Entry txtSalario;
 
 		private global::Gtk.HBox hbox9;
 
 		private global::Gtk.Label label13;
 
-		private global::Gtk.Entry entry10;
+		private global::Gtk.Entry txtFecha;
 
 		private global::Gtk.Label GtkLabel2;
 
@@ -98,7 +98,7 @@ namespace Nomina
 
 		private global::Gtk.HBox hbox16;
 
-		private global::Gtk.Entry entry5;
+		private global::Gtk.Entry txtInss;
 
 		private global::Gtk.Label Plantilla;
 
@@ -116,7 +116,7 @@ namespace Nomina
 
 		private global::Gtk.Label label8;
 
-		private global::Gtk.Entry entry6;
+		private global::Gtk.Entry txtDescripcion;
 
 		private global::Gtk.HBox hbox19;
 
@@ -180,7 +180,7 @@ namespace Nomina
 
 		private global::Gtk.Button button2;
 
-		private global::Gtk.Button button3;
+		private global::Gtk.Button btnGuardar;
 
 		protected virtual void Build()
 		{
@@ -244,13 +244,13 @@ namespace Nomina
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.entry1 = new global::Gtk.Entry();
-			this.entry1.CanFocus = true;
-			this.entry1.Name = "entry1";
-			this.entry1.IsEditable = true;
-			this.entry1.InvisibleChar = '•';
-			this.hbox1.Add(this.entry1);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.entry1]));
+			this.txtNombre = new global::Gtk.Entry();
+			this.txtNombre.CanFocus = true;
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.IsEditable = true;
+			this.txtNombre.InvisibleChar = '•';
+			this.hbox1.Add(this.txtNombre);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.txtNombre]));
 			w4.Position = 1;
 			this.table1.Add(this.hbox1);
 			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox1]));
@@ -323,13 +323,13 @@ namespace Nomina
 			w12.Expand = false;
 			w12.Fill = false;
 			// Container child hbox3.Gtk.Box+BoxChild
-			this.entry2 = new global::Gtk.Entry();
-			this.entry2.CanFocus = true;
-			this.entry2.Name = "entry2";
-			this.entry2.IsEditable = true;
-			this.entry2.InvisibleChar = '•';
-			this.hbox3.Add(this.entry2);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.entry2]));
+			this.txtApellidos = new global::Gtk.Entry();
+			this.txtApellidos.CanFocus = true;
+			this.txtApellidos.Name = "txtApellidos";
+			this.txtApellidos.IsEditable = true;
+			this.txtApellidos.InvisibleChar = '•';
+			this.hbox3.Add(this.txtApellidos);
+			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.txtApellidos]));
 			w13.Position = 1;
 			this.table1.Add(this.hbox3);
 			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox3]));
@@ -351,13 +351,13 @@ namespace Nomina
 			w15.Expand = false;
 			w15.Fill = false;
 			// Container child hbox4.Gtk.Box+BoxChild
-			this.entry3 = new global::Gtk.Entry();
-			this.entry3.CanFocus = true;
-			this.entry3.Name = "entry3";
-			this.entry3.IsEditable = true;
-			this.entry3.InvisibleChar = '•';
-			this.hbox4.Add(this.entry3);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.entry3]));
+			this.txtCedula = new global::Gtk.Entry();
+			this.txtCedula.CanFocus = true;
+			this.txtCedula.Name = "txtCedula";
+			this.txtCedula.IsEditable = true;
+			this.txtCedula.InvisibleChar = '•';
+			this.hbox4.Add(this.txtCedula);
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.txtCedula]));
 			w16.Position = 1;
 			this.table1.Add(this.hbox4);
 			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox4]));
@@ -378,13 +378,13 @@ namespace Nomina
 			w18.Expand = false;
 			w18.Fill = false;
 			// Container child hbox5.Gtk.Box+BoxChild
-			this.entry4 = new global::Gtk.Entry();
-			this.entry4.CanFocus = true;
-			this.entry4.Name = "entry4";
-			this.entry4.IsEditable = true;
-			this.entry4.InvisibleChar = '•';
-			this.hbox5.Add(this.entry4);
-			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.entry4]));
+			this.txtNivelEstudio = new global::Gtk.Entry();
+			this.txtNivelEstudio.CanFocus = true;
+			this.txtNivelEstudio.Name = "txtNivelEstudio";
+			this.txtNivelEstudio.IsEditable = true;
+			this.txtNivelEstudio.InvisibleChar = '•';
+			this.hbox5.Add(this.txtNivelEstudio);
+			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.txtNivelEstudio]));
 			w19.Position = 1;
 			this.table1.Add(this.hbox5);
 			global::Gtk.Table.TableChild w20 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox5]));
@@ -408,13 +408,13 @@ namespace Nomina
 			w21.Expand = false;
 			w21.Fill = false;
 			// Container child hbox6.Gtk.Box+BoxChild
-			this.entry7 = new global::Gtk.Entry();
-			this.entry7.CanFocus = true;
-			this.entry7.Name = "entry7";
-			this.entry7.IsEditable = true;
-			this.entry7.InvisibleChar = '•';
-			this.hbox6.Add(this.entry7);
-			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.entry7]));
+			this.txtCorreo = new global::Gtk.Entry();
+			this.txtCorreo.CanFocus = true;
+			this.txtCorreo.Name = "txtCorreo";
+			this.txtCorreo.IsEditable = false;
+			this.txtCorreo.InvisibleChar = '•';
+			this.hbox6.Add(this.txtCorreo);
+			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.txtCorreo]));
 			w22.Position = 1;
 			this.table1.Add(this.hbox6);
 			global::Gtk.Table.TableChild w23 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox6]));
@@ -435,13 +435,13 @@ namespace Nomina
 			w24.Expand = false;
 			w24.Fill = false;
 			// Container child hbox7.Gtk.Box+BoxChild
-			this.entry8 = new global::Gtk.Entry();
-			this.entry8.CanFocus = true;
-			this.entry8.Name = "entry8";
-			this.entry8.IsEditable = true;
-			this.entry8.InvisibleChar = '•';
-			this.hbox7.Add(this.entry8);
-			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.entry8]));
+			this.txtDireccion = new global::Gtk.Entry();
+			this.txtDireccion.CanFocus = true;
+			this.txtDireccion.Name = "txtDireccion";
+			this.txtDireccion.IsEditable = true;
+			this.txtDireccion.InvisibleChar = '•';
+			this.hbox7.Add(this.txtDireccion);
+			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.txtDireccion]));
 			w25.Position = 1;
 			this.table1.Add(this.hbox7);
 			global::Gtk.Table.TableChild w26 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox7]));
@@ -462,13 +462,13 @@ namespace Nomina
 			w27.Expand = false;
 			w27.Fill = false;
 			// Container child hbox8.Gtk.Box+BoxChild
-			this.entry9 = new global::Gtk.Entry();
-			this.entry9.CanFocus = true;
-			this.entry9.Name = "entry9";
-			this.entry9.IsEditable = true;
-			this.entry9.InvisibleChar = '•';
-			this.hbox8.Add(this.entry9);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox8[this.entry9]));
+			this.txtSalario = new global::Gtk.Entry();
+			this.txtSalario.CanFocus = true;
+			this.txtSalario.Name = "txtSalario";
+			this.txtSalario.IsEditable = true;
+			this.txtSalario.InvisibleChar = '•';
+			this.hbox8.Add(this.txtSalario);
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox8[this.txtSalario]));
 			w28.Position = 1;
 			this.table1.Add(this.hbox8);
 			global::Gtk.Table.TableChild w29 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox8]));
@@ -489,13 +489,13 @@ namespace Nomina
 			w30.Expand = false;
 			w30.Fill = false;
 			// Container child hbox9.Gtk.Box+BoxChild
-			this.entry10 = new global::Gtk.Entry();
-			this.entry10.CanFocus = true;
-			this.entry10.Name = "entry10";
-			this.entry10.IsEditable = true;
-			this.entry10.InvisibleChar = '•';
-			this.hbox9.Add(this.entry10);
-			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.entry10]));
+			this.txtFecha = new global::Gtk.Entry();
+			this.txtFecha.CanFocus = true;
+			this.txtFecha.Name = "txtFecha";
+			this.txtFecha.IsEditable = true;
+			this.txtFecha.InvisibleChar = '•';
+			this.hbox9.Add(this.txtFecha);
+			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.txtFecha]));
 			w31.Position = 1;
 			this.table1.Add(this.hbox9);
 			global::Gtk.Table.TableChild w32 = ((global::Gtk.Table.TableChild)(this.table1[this.hbox9]));
@@ -555,13 +555,13 @@ namespace Nomina
 			this.hbox16.Name = "hbox16";
 			this.hbox16.Spacing = 6;
 			// Container child hbox16.Gtk.Box+BoxChild
-			this.entry5 = new global::Gtk.Entry();
-			this.entry5.CanFocus = true;
-			this.entry5.Name = "entry5";
-			this.entry5.IsEditable = true;
-			this.entry5.InvisibleChar = '•';
-			this.hbox16.Add(this.entry5);
-			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.entry5]));
+			this.txtInss = new global::Gtk.Entry();
+			this.txtInss.CanFocus = true;
+			this.txtInss.Name = "txtInss";
+			this.txtInss.IsEditable = true;
+			this.txtInss.InvisibleChar = '•';
+			this.hbox16.Add(this.txtInss);
+			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.hbox16[this.txtInss]));
 			w38.Position = 0;
 			// Container child hbox16.Gtk.Box+BoxChild
 			this.Plantilla = new global::Gtk.Label();
@@ -619,13 +619,13 @@ namespace Nomina
 			w44.Expand = false;
 			w44.Fill = false;
 			// Container child hbox18.Gtk.Box+BoxChild
-			this.entry6 = new global::Gtk.Entry();
-			this.entry6.CanFocus = true;
-			this.entry6.Name = "entry6";
-			this.entry6.IsEditable = true;
-			this.entry6.InvisibleChar = '•';
-			this.hbox18.Add(this.entry6);
-			global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.hbox18[this.entry6]));
+			this.txtDescripcion = new global::Gtk.Entry();
+			this.txtDescripcion.CanFocus = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.IsEditable = true;
+			this.txtDescripcion.InvisibleChar = '•';
+			this.hbox18.Add(this.txtDescripcion);
+			global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.hbox18[this.txtDescripcion]));
 			w45.Position = 1;
 			w45.Expand = false;
 			w45.Fill = false;
@@ -874,13 +874,13 @@ namespace Nomina
 			global::Gtk.Box.BoxChild w80 = ((global::Gtk.Box.BoxChild)(this.hbox10[this.hbox11]));
 			w80.Position = 1;
 			// Container child hbox10.Gtk.Box+BoxChild
-			this.button3 = new global::Gtk.Button();
-			this.button3.CanFocus = true;
-			this.button3.Name = "button3";
-			this.button3.UseUnderline = true;
-			this.button3.Label = global::Mono.Unix.Catalog.GetString("Guardar");
-			this.hbox10.Add(this.button3);
-			global::Gtk.Box.BoxChild w81 = ((global::Gtk.Box.BoxChild)(this.hbox10[this.button3]));
+			this.btnGuardar = new global::Gtk.Button();
+			this.btnGuardar.CanFocus = true;
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.UseUnderline = true;
+			this.btnGuardar.Label = global::Mono.Unix.Catalog.GetString("Guardar");
+			this.hbox10.Add(this.btnGuardar);
+			global::Gtk.Box.BoxChild w81 = ((global::Gtk.Box.BoxChild)(this.hbox10[this.btnGuardar]));
 			w81.Position = 2;
 			w81.Expand = false;
 			w81.Fill = false;
@@ -897,6 +897,7 @@ namespace Nomina
 			this.DefaultWidth = 669;
 			this.DefaultHeight = 493;
 			this.Show();
+			this.btnGuardar.Clicked += new global::System.EventHandler(this.OnBtnGuardarClicked);
 		}
 	}
 }

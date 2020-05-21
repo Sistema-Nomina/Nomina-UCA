@@ -1,18 +1,12 @@
 ﻿<Properties StartupConfiguration="{0F66297E-03CF-41EA-9E75-633146F6F00E}|Default">
   <MonoDevelop.Ide.ItemProperties.Nomina PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nomina/Detalle Empleado.cs">
-    <Files>
-      <File FileName="Nomina/Visualizar_Pago.cs" Line="207" Column="9" />
-      <File FileName="Nomina/Detalle Empleado.cs" Line="155" Column="16" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Nomina" expanded="True">
             <Node name="Nomina" expanded="True">
-              <Node name="Datos" expanded="True" />
-              <Node name="Entidades" expanded="True" />
-              <Node name="Detalle Empleado.cs" selected="True" />
+              <Node name="Agregar_Empleado.cs" selected="True" />
             </Node>
           </Node>
         </State>

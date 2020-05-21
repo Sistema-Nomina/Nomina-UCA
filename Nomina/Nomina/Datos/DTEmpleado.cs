@@ -104,6 +104,35 @@ namespace Nomina.Datos
             return listaEmpleado;
         }
 
+        public Int32 guardarEmpleado(Entidades.Empleado a)
+        {
+            int guardado = 0;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Insert into nomina.Empleado(Nombre, Apellidos, Cedula, NivelEstudio, INSS_Empleado, Fecha_Contratacion, " +
+            	"IdEstado, Direccion, SalarioEmpleado, IdPlanilla, IdArea, IdContrato, IdSucural, IdCargo) " +
+            	"Values('" + a.Nombre + "','" + a.Apellidos + "','" + a.Cedula + "','" + a.NivelEstudio + "','"+ a.Inss_Empleado + "', Now()," +
+                a.IdEstado+ ",'" + a.Direccion + "'," + a.SalarioEmpleado + "," + a.IdPlanilla + "," + a.IdArea + "," + a.IdContrato + ","+ a.IdSucursal + "," + a.IdCargo + ");");
+            /*sb.Append("(Nombre, Extension, NumeroRUC)");
+            sb.Append("VALUES('"+ a.Nombre + "','" + a.Extension + "'," + a.NumeroRuc + ";");*/
+
+            try
+            {
+                con.Open();
+                guardado = con.Ejecutar(CommandType.Text, sb.ToString());
+                return guardado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DTEmpleado()
         {
         }

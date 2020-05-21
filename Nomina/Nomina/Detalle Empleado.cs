@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using Gtk;
 using Nomina.Datos;
+using Nomina.Utilidades;
 
 namespace Nomina
 {
     public partial class Detalle_Empleado : Gtk.Window
     {
+
+        calcularDeduccion cd = new calcularDeduccion();
         public Detalle_Empleado() :
                 base(Gtk.WindowType.Toplevel)
         {
@@ -34,8 +37,8 @@ namespace Nomina
                 deduccion = 0;
                 deduccion = a.SalarioEmpleado * 0.0625;
                 salario = a.SalarioEmpleado - deduccion;
-                salarioTotal = salario - calcularIR(a.SalarioEmpleado);
-                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(),a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
+                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(),a.Fecha_contratacion.ToString(), a.Direccion.ToString());
             }
 
             //Crear el modelo de datos
@@ -113,8 +116,8 @@ namespace Nomina
                     deduccion = 0;
                     deduccion = a.SalarioEmpleado * 0.0625;
                     salario = a.SalarioEmpleado - deduccion;
-                    salarioTotal = salario - calcularIR(a.SalarioEmpleado);
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
                 }
 
             }
@@ -150,8 +153,8 @@ namespace Nomina
                     deduccion = 0;
                     deduccion = a.SalarioEmpleado * 0.0625;
                     salario = a.SalarioEmpleado - deduccion;
-                    salarioTotal = salario - calcularIR(a.SalarioEmpleado);
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
                 }
 
             }
@@ -188,83 +191,6 @@ namespace Nomina
             recargarTreeView();
             llenarTreeviewPorSucursal(nombreSucursal);
 
-        }
-
-        public double calcularIR(double salarioMesNeto)
-        {
-            double salarioAnualneto = 0.0, deduccionInss;
-            double sobreExceso=0, porcentajeAplicable=0, baseTax=0;
-            double sinSobreExceso=0, conPorcentajeAplicable=0, conBaseTax=0, IrMensual=0;
-
-            salarioAnualneto = salarioMesNeto * 12;
-
-            Console.WriteLine("Salrio:" + salarioAnualneto);
-
-            deduccionInss = salarioAnualneto - (salarioAnualneto * 0.0625);
-
-
-
-            if (deduccionInss >= 0 && deduccionInss <= 100000)
-            {
-                sobreExceso = 0;
-                porcentajeAplicable = 0;
-                baseTax = 0;
-
-                sinSobreExceso = (deduccionInss-sobreExceso);
-                conPorcentajeAplicable = (sinSobreExceso * porcentajeAplicable);
-                conBaseTax = (conPorcentajeAplicable + baseTax);
-                IrMensual = (conBaseTax / 12);
-            }
-            else if (deduccionInss > 100000 && deduccionInss <= 200000)
-            {
-                sobreExceso = 100000;
-                porcentajeAplicable = 0.15;
-                baseTax = 0;
-
-
-                sinSobreExceso = (deduccionInss - sobreExceso);
-                conPorcentajeAplicable = (sinSobreExceso * porcentajeAplicable);
-                conBaseTax = (conPorcentajeAplicable + baseTax);
-                IrMensual = (conBaseTax / 12);
-            }
-            else if (deduccionInss > 200000 && deduccionInss <= 350000)
-            {
-                sobreExceso = 200000;
-                porcentajeAplicable = 0.20;
-                baseTax = 15000;
-
-
-                sinSobreExceso = (deduccionInss - sobreExceso);
-                conPorcentajeAplicable = (sinSobreExceso * porcentajeAplicable);
-                conBaseTax = (conPorcentajeAplicable + baseTax);
-                IrMensual = (conBaseTax / 12);
-            }
-            else if (deduccionInss > 350000 && deduccionInss <= 500000)
-            {
-                sobreExceso = 350000;
-                porcentajeAplicable = 0.25;
-                baseTax = 45000;
-
-
-                sinSobreExceso = (deduccionInss - sobreExceso);
-                conPorcentajeAplicable = (sinSobreExceso * porcentajeAplicable);
-                conBaseTax = (conPorcentajeAplicable + baseTax);
-                IrMensual = (conBaseTax / 12);
-            }
-            else if (deduccionInss > 500000)
-            {
-                sobreExceso = 500000;
-                porcentajeAplicable = 0.30;
-                baseTax = 82500;
-
-
-                sinSobreExceso = (deduccionInss - sobreExceso);
-                conPorcentajeAplicable = (sinSobreExceso * porcentajeAplicable);
-                conBaseTax = (conPorcentajeAplicable + baseTax);
-                IrMensual = (conBaseTax / 12);
-            }
-
-            return IrMensual;
         }
     }
 }
