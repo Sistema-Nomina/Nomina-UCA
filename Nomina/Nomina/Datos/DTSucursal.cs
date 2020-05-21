@@ -15,7 +15,7 @@ namespace Nomina.Datos
             IDataReader idr = null;
             StringBuilder sb = new StringBuilder();
             sb.Append("USE nomina;");
-            sb.Append("Select * from Sucursal;");
+            sb.Append("Select * from sucursal_empresa;");
 
             try
             {
@@ -28,7 +28,8 @@ namespace Nomina.Datos
                         IdSucursal = Convert.ToInt32(idr["IdSucursal"]),
                         Nombre = idr["Nombre"].ToString(),
                         Extension = idr["Extension"].ToString(),
-                        NumeroRuc = Convert.ToInt32(idr["NumeroRUC"])
+                        NombreEmpresa = idr["nombreEm"].ToString(),
+                        //NumeroRuc = Convert.ToInt32(idr["NumeroRUC"])
                     };
 
                     listaSucursal.Add(a);
@@ -63,6 +64,34 @@ namespace Nomina.Datos
                 con.Open();
                 guardado = con.Ejecutar(CommandType.Text, sb.ToString());
                 return guardado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Int32 modificarSucursal(Entidades.Sucursal a)
+        {
+            int modificar = 0;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("use nomina;");
+            sb.Append("UPDATE Sucursal set Nombre = '" + a.Nombre + "' ," +
+                "Extension = '" + a.Extension + "', NumeroRUC=" + a.NumeroRuc +
+                " Where IdSucursal =" + a.IdSucursal);
+
+            try
+            {
+                con.Open();
+                modificar = con.Ejecutar(CommandType.Text, sb.ToString());
+                return modificar;
             }
             catch (Exception e)
             {

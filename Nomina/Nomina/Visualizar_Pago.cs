@@ -204,5 +204,6 @@ namespace Nomina
             llenarTreeviewPago_Extra(idpagar);
             llenarTreeviewPago_Deduccion(idpagar);
         }
+
     }
 }

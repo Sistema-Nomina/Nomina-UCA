@@ -359,6 +359,7 @@ namespace Nomina
 			this.DefaultWidth = 770;
 			this.DefaultHeight = 300;
 			this.Show();
+			this.btnBuscarEmpresa.Clicked += new global::System.EventHandler(this.OnBtnBuscarEmpresaClicked);
 		}
 	}
 }

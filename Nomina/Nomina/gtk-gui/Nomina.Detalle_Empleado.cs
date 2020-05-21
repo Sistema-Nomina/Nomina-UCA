@@ -101,7 +101,6 @@ namespace Nomina
 			this.GtkAlignment.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox();
-			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbox1 = new global::Gtk.HBox();
@@ -259,8 +258,8 @@ namespace Nomina
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 797;
-			this.DefaultHeight = 294;
+			this.DefaultWidth = 931;
+			this.DefaultHeight = 470;
 			this.Show();
 			this.btnBuscarEm.Clicked += new global::System.EventHandler(this.OnBtnBuscarEmClicked);
 			this.btnBuscarS.Clicked += new global::System.EventHandler(this.OnBtnBuscarSClicked);

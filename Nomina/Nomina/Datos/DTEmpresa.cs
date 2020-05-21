@@ -76,6 +76,34 @@ namespace Nomina.Datos
             }
         }
 
+        public Int32 modificarEmpresa(Entidades.Empresa a)
+        {
+            int modificar = 0;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("use nomina;");
+            sb.Append("UPDATE Empresa set Nombre = '" + a.Nombre + "' ," +
+                "Telefono = '" + a.Telefono + "', Direccion='"+a.Direccion +"'"+
+                "Where NumeroRUC =" + a.NumeroRuc);
+
+            try
+            {
+                con.Open();
+                modificar = con.Ejecutar(CommandType.Text, sb.ToString());
+                return modificar;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DTEmpresa()
         {
         }

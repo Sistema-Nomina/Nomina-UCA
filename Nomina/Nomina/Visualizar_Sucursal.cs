@@ -27,7 +27,7 @@ namespace Nomina
 
             foreach (Nomina.Entidades.Sucursal a in lista)
             {
-                ls.AppendValues(a.IdSucursal.ToString(), a.Nombre.ToString(), a.Extension.ToString(), a.NumeroRuc.ToString());
+                ls.AppendValues(a.IdSucursal.ToString(), a.Nombre.ToString(), a.Extension.ToString(), a.NombreEmpresa.ToString());
             }
 
             //Crear el modelo de datos
@@ -36,7 +36,7 @@ namespace Nomina
             trvSucursal.AppendColumn("IdSucursal", new CellRendererText(), "text", 0);
             trvSucursal.AppendColumn("Nombre", new CellRendererText(), "text", 1);
             trvSucursal.AppendColumn("Extension", new CellRendererText(), "text", 2);
-            trvSucursal.AppendColumn("NumeroRUC", new CellRendererText(), "text", 3);
+            trvSucursal.AppendColumn("Nombre Empresa", new CellRendererText(), "text", 3);
 
         }
 
@@ -58,5 +58,50 @@ namespace Nomina
             cmbEmpresa.Model = lscmb;
         }
 
+
+        public void llenarTreeviewPorEmpresa(string nombreEmpresa)
+        {
+            DTSucursal dta = new DTSucursal();
+            List<Nomina.Entidades.Sucursal> lista = new List<Nomina.Entidades.Sucursal>();
+            lista = dta.ListarSucursal();
+
+            foreach (Nomina.Entidades.Sucursal a in lista)
+            {
+                if (nombreEmpresa == a.NombreEmpresa)
+                {
+                    ls.AppendValues(a.IdSucursal.ToString(), a.Nombre.ToString(), a.Extension.ToString(), a.NombreEmpresa.ToString());
+                }
+
+            }
+
+            //Crear el modelo de datos
+            trvSucursal.Model = ls;
+
+            trvSucursal.AppendColumn("IdSucursal", new CellRendererText(), "text", 0);
+            trvSucursal.AppendColumn("Nombre", new CellRendererText(), "text", 1);
+            trvSucursal.AppendColumn("Extension", new CellRendererText(), "text", 2);
+            trvSucursal.AppendColumn("Nombre Empresa", new CellRendererText(), "text", 3);
+
+        }
+
+        public void recargarTreeView()
+        {
+            TreeViewColumn[] listColumns;
+            listColumns = trvSucursal.Columns;
+            foreach (TreeViewColumn tvc in listColumns)
+            {
+                trvSucursal.RemoveColumn(tvc);
+            }
+            ls.Clear();
+        }
+
+        protected void OnBtnBuscarEmpresaClicked(object sender, EventArgs e)
+        {
+            string nombreEmpresa = cmbEmpresa.ActiveText;
+
+            recargarTreeView();
+            llenarTreeviewPorEmpresa(nombreEmpresa);
+
+        }
     }
 }
