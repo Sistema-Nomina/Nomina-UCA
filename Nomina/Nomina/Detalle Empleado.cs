@@ -38,7 +38,7 @@ namespace Nomina
                 deduccion = a.SalarioEmpleado * 0.0625;
                 salario = a.SalarioEmpleado - deduccion;
                 salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
-                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(),a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString("N2"), salario.ToString("N2"), deduccion.ToString("N2"), cd.calcularIR(a.SalarioEmpleado).ToString("N2"), salarioTotal.ToString("N2"),a.Fecha_contratacion.ToString(), a.Direccion.ToString());
             }
 
             //Crear el modelo de datos
@@ -117,7 +117,7 @@ namespace Nomina
                     deduccion = a.SalarioEmpleado * 0.0625;
                     salario = a.SalarioEmpleado - deduccion;
                     salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString("N2"), salario.ToString("N2"), deduccion.ToString("N2"), cd.calcularIR(a.SalarioEmpleado).ToString("N2"), salarioTotal.ToString("N2"), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
                 }
 
             }
@@ -154,7 +154,7 @@ namespace Nomina
                     deduccion = a.SalarioEmpleado * 0.0625;
                     salario = a.SalarioEmpleado - deduccion;
                     salarioTotal = salario - cd.calcularIR(a.SalarioEmpleado);
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), salario.ToString(), deduccion.ToString(), cd.calcularIR(a.SalarioEmpleado).ToString(), salarioTotal.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString("N2"), salario.ToString("N2"), deduccion.ToString("N2"), cd.calcularIR(a.SalarioEmpleado).ToString("N2"), salarioTotal.ToString("N2"), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
                 }
 
             }
@@ -191,6 +191,12 @@ namespace Nomina
             recargarTreeView();
             llenarTreeviewPorSucursal(nombreSucursal);
 
+        }
+
+        protected void OnBtnMostrarClicked(object sender, EventArgs e)
+        {
+            recargarTreeView();
+            llenarTreeview();
         }
     }
 }

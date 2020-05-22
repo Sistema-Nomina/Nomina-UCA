@@ -32,6 +32,8 @@ namespace Nomina
 
 		private global::Gtk.Alignment alignment1;
 
+		private global::Gtk.Button btnMostrar;
+
 		private global::Gtk.Button btnBuscarEm;
 
 		private global::Gtk.HBox hbox2;
@@ -101,6 +103,7 @@ namespace Nomina
 			this.GtkAlignment.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox();
+			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbox1 = new global::Gtk.HBox();
@@ -134,12 +137,21 @@ namespace Nomina
 			// Container child hbox4.Gtk.Box+BoxChild
 			this.alignment1 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
 			this.alignment1.Name = "alignment1";
+			// Container child alignment1.Gtk.Container+ContainerChild
+			this.btnMostrar = new global::Gtk.Button();
+			this.btnMostrar.CanFocus = true;
+			this.btnMostrar.Name = "btnMostrar";
+			this.btnMostrar.UseUnderline = true;
+			this.btnMostrar.Label = global::Mono.Unix.Catalog.GetString("Mostrar Todo");
+			this.alignment1.Add(this.btnMostrar);
 			this.hbox4.Add(this.alignment1);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.alignment1]));
-			w6.Position = 2;
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.alignment1]));
+			w7.Position = 2;
+			w7.Expand = false;
+			w7.Fill = false;
 			this.hbox1.Add(this.hbox4);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.hbox4]));
-			w7.Position = 1;
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.hbox4]));
+			w8.Position = 1;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.btnBuscarEm = new global::Gtk.Button();
 			this.btnBuscarEm.CanFocus = true;
@@ -147,15 +159,15 @@ namespace Nomina
 			this.btnBuscarEm.UseUnderline = true;
 			this.btnBuscarEm.Label = global::Mono.Unix.Catalog.GetString("Buscar por Empresa");
 			this.hbox1.Add(this.btnBuscarEm);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.btnBuscarEm]));
-			w8.Position = 2;
-			w8.Expand = false;
-			w8.Fill = false;
-			this.vbox1.Add(this.hbox1);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
-			w9.Position = 0;
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.btnBuscarEm]));
+			w9.Position = 2;
 			w9.Expand = false;
 			w9.Fill = false;
+			this.vbox1.Add(this.hbox1);
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+			w10.Position = 0;
+			w10.Expand = false;
+			w10.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbox2 = new global::Gtk.HBox();
 			this.hbox2.Name = "hbox2";
@@ -165,10 +177,10 @@ namespace Nomina
 			this.label2.Name = "label2";
 			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString("Sucursal:");
 			this.hbox2.Add(this.label2);
-			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.label2]));
-			w10.Position = 0;
-			w10.Expand = false;
-			w10.Fill = false;
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.label2]));
+			w11.Position = 0;
+			w11.Expand = false;
+			w11.Fill = false;
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.hbox3 = new global::Gtk.HBox();
 			this.hbox3.Name = "hbox3";
@@ -177,23 +189,23 @@ namespace Nomina
 			this.cmbSucursal = global::Gtk.ComboBox.NewText();
 			this.cmbSucursal.Name = "cmbSucursal";
 			this.hbox3.Add(this.cmbSucursal);
-			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.cmbSucursal]));
-			w11.Position = 0;
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.cmbSucursal]));
+			w12.Position = 0;
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.alignment4 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
 			this.alignment4.Name = "alignment4";
 			this.hbox3.Add(this.alignment4);
-			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment4]));
-			w12.Position = 1;
+			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment4]));
+			w13.Position = 1;
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.alignment3 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
 			this.alignment3.Name = "alignment3";
 			this.hbox3.Add(this.alignment3);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment3]));
-			w13.Position = 2;
+			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment3]));
+			w14.Position = 2;
 			this.hbox2.Add(this.hbox3);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.hbox3]));
-			w14.Position = 1;
+			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.hbox3]));
+			w15.Position = 1;
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.btnBuscarS = new global::Gtk.Button();
 			this.btnBuscarS.CanFocus = true;
@@ -201,15 +213,15 @@ namespace Nomina
 			this.btnBuscarS.UseUnderline = true;
 			this.btnBuscarS.Label = global::Mono.Unix.Catalog.GetString("Buscar por sucursal");
 			this.hbox2.Add(this.btnBuscarS);
-			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.btnBuscarS]));
-			w15.Position = 2;
-			w15.Expand = false;
-			w15.Fill = false;
-			this.vbox1.Add(this.hbox2);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox2]));
-			w16.Position = 1;
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.btnBuscarS]));
+			w16.Position = 2;
 			w16.Expand = false;
 			w16.Fill = false;
+			this.vbox1.Add(this.hbox2);
+			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox2]));
+			w17.Position = 1;
+			w17.Expand = false;
+			w17.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow();
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
@@ -220,8 +232,8 @@ namespace Nomina
 			this.trvEmpleado.Name = "trvEmpleado";
 			this.GtkScrolledWindow.Add(this.trvEmpleado);
 			this.vbox1.Add(this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
-			w18.Position = 2;
+			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
+			w19.Position = 2;
 			this.GtkAlignment.Add(this.vbox1);
 			this.frame1.Add(this.GtkAlignment);
 			this.GtkLabel4 = new global::Gtk.Label();
@@ -230,8 +242,8 @@ namespace Nomina
 			this.GtkLabel4.UseMarkup = true;
 			this.frame1.LabelWidget = this.GtkLabel4;
 			this.vbox5.Add(this.frame1);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.frame1]));
-			w21.Position = 1;
+			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.frame1]));
+			w22.Position = 1;
 			// Container child vbox5.Gtk.Box+BoxChild
 			this.vbox6 = new global::Gtk.VBox();
 			this.vbox6.Name = "vbox6";
@@ -244,15 +256,15 @@ namespace Nomina
 			this.hseparator1.Name = "hseparator1";
 			this.alignment10.Add(this.hseparator1);
 			this.vbox6.Add(this.alignment10);
-			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.alignment10]));
-			w23.Position = 0;
-			w23.Expand = false;
-			w23.Fill = false;
-			this.vbox5.Add(this.vbox6);
-			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox6]));
-			w24.Position = 2;
+			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.vbox6[this.alignment10]));
+			w24.Position = 0;
 			w24.Expand = false;
 			w24.Fill = false;
+			this.vbox5.Add(this.vbox6);
+			global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.vbox5[this.vbox6]));
+			w25.Position = 2;
+			w25.Expand = false;
+			w25.Fill = false;
 			this.Add(this.vbox5);
 			if ((this.Child != null))
 			{
@@ -261,6 +273,7 @@ namespace Nomina
 			this.DefaultWidth = 931;
 			this.DefaultHeight = 470;
 			this.Show();
+			this.btnMostrar.Clicked += new global::System.EventHandler(this.OnBtnMostrarClicked);
 			this.btnBuscarEm.Clicked += new global::System.EventHandler(this.OnBtnBuscarEmClicked);
 			this.btnBuscarS.Clicked += new global::System.EventHandler(this.OnBtnBuscarSClicked);
 		}

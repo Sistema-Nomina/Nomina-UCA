@@ -66,6 +66,10 @@ namespace Nomina.Utilidades
                 IrMensual = irMensual(sobreExceso, porcentajeAplicable, baseTax, deduccionInss);
             }
 
+            /*double value = IrMensual;
+            double num = (Math.Truncate(value * 10000) / 10000);
+            Console.WriteLine(num);*/
+
             return IrMensual;
         }
 
@@ -80,6 +84,12 @@ namespace Nomina.Utilidades
 
             return IrMensual;
         }
+
+        /*public static double Truncate(this double value, int decimales)
+        {
+            double aux_value = Math.Pow(10, decimales);
+            return (Math.Truncate(value * aux_value) / aux_value);
+        }*/
 
     }
 }
