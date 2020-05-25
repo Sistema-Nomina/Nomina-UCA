@@ -25,7 +25,7 @@ namespace Nomina
 
             foreach (Nomina.Entidades.Usuario a in lista)
             {
-                ls.AppendValues(a.IdUsuario.ToString(), a.IdEmpleado.ToString(), a.Usuarios.ToString(), a.Pwd.ToString(), a.Fecha_creacion.ToString(), a.Activo.ToString());
+                ls.AppendValues(a.IdUsuario.ToString(), a.IdEmpleado.ToString(), a.Usuarios.ToString(), a.Pwd.ToString(), a.Fecha_creacion.ToString("dd-MM-yyyy"), a.Activo.ToString());
             }
 
             //Crear el modelo de datos

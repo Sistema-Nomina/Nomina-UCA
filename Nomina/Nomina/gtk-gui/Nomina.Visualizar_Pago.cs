@@ -84,6 +84,10 @@ namespace Nomina
 
 		private global::Gtk.Alignment alignment2;
 
+		private global::Gtk.Label label2;
+
+		private global::Gtk.Entry txtST;
+
 		private global::Gtk.Label GtkLabel6;
 
 		private global::Gtk.HBox hbox2;
@@ -364,9 +368,26 @@ namespace Nomina
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.alignment2 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
 			this.alignment2.Name = "alignment2";
+			// Container child alignment2.Gtk.Container+ContainerChild
+			this.label2 = new global::Gtk.Label();
+			this.label2.Name = "label2";
+			this.label2.Xalign = 1F;
+			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString("Monto Total:");
+			this.alignment2.Add(this.label2);
 			this.hbox3.Add(this.alignment2);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment2]));
-			w28.Position = 1;
+			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.alignment2]));
+			w29.Position = 1;
+			w29.Expand = false;
+			w29.Fill = false;
+			// Container child hbox3.Gtk.Box+BoxChild
+			this.txtST = new global::Gtk.Entry();
+			this.txtST.CanFocus = true;
+			this.txtST.Name = "txtST";
+			this.txtST.IsEditable = true;
+			this.txtST.InvisibleChar = '•';
+			this.hbox3.Add(this.txtST);
+			global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.txtST]));
+			w30.Position = 2;
 			this.GtkAlignment1.Add(this.hbox3);
 			this.frame3.Add(this.GtkAlignment1);
 			this.GtkLabel6 = new global::Gtk.Label();
@@ -375,10 +396,10 @@ namespace Nomina
 			this.GtkLabel6.UseMarkup = true;
 			this.frame3.LabelWidget = this.GtkLabel6;
 			this.vbox2.Add(this.frame3);
-			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.frame3]));
-			w31.Position = 0;
-			w31.Expand = false;
-			w31.Fill = false;
+			global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.frame3]));
+			w33.Position = 0;
+			w33.Expand = false;
+			w33.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.hbox2 = new global::Gtk.HBox();
 			this.hbox2.Name = "hbox2";
@@ -408,8 +429,8 @@ namespace Nomina
 			this.GtkLabel3.UseMarkup = true;
 			this.frame1.LabelWidget = this.GtkLabel3;
 			this.hbox2.Add(this.frame1);
-			global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.frame1]));
-			w35.Position = 0;
+			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.frame1]));
+			w37.Position = 0;
 			// Container child hbox2.Gtk.Box+BoxChild
 			this.frame2 = new global::Gtk.Frame();
 			this.frame2.Name = "frame2";
@@ -435,17 +456,17 @@ namespace Nomina
 			this.GtkLabel4.UseMarkup = true;
 			this.frame2.LabelWidget = this.GtkLabel4;
 			this.hbox2.Add(this.frame2);
-			global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.frame2]));
-			w39.Position = 1;
+			global::Gtk.Box.BoxChild w41 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.frame2]));
+			w41.Position = 1;
 			this.vbox2.Add(this.hbox2);
-			global::Gtk.Box.BoxChild w40 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox2]));
-			w40.Position = 1;
+			global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox2]));
+			w42.Position = 1;
 			this.vbox11.Add(this.vbox2);
-			global::Gtk.Box.BoxChild w41 = ((global::Gtk.Box.BoxChild)(this.vbox11[this.vbox2]));
-			w41.Position = 2;
+			global::Gtk.Box.BoxChild w43 = ((global::Gtk.Box.BoxChild)(this.vbox11[this.vbox2]));
+			w43.Position = 2;
 			this.vbox10.Add(this.vbox11);
-			global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(this.vbox10[this.vbox11]));
-			w42.Position = 2;
+			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.vbox10[this.vbox11]));
+			w44.Position = 2;
 			this.Add(this.vbox10);
 			if ((this.Child != null))
 			{

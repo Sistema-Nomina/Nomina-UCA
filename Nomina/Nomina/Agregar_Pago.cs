@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using Gtk;
 using Nomina.Datos;
+using Nomina.Utilidades;
 
 namespace Nomina
 {
     public partial class Agregar_Pago : Gtk.Window
     {
+        Mensaje _msj = new Mensaje();
+
         public Agregar_Pago() :
                 base(Gtk.WindowType.Toplevel)
         {
@@ -82,7 +85,7 @@ namespace Nomina
             {
                 foreach (Nomina.Entidades.Empleado a in lista)
                 {
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString("dd-MM-yyyy"), a.Direccion.ToString());
                 }
             }
 
@@ -159,16 +162,152 @@ namespace Nomina
             model.GetIter(out iter, args.Path);
 
             var id = model.GetValue(iter, 0);
-            var nombre = model.GetValue(iter, 1);
+            var monto = model.GetValue(iter, 4);
 
             this.txtIDEmpleado.Text = Convert.ToString(id);
+            this.txtMontoS.Text = Convert.ToString(monto);
 
         }
 
         protected void OnBtnGuardarPagoClicked(object sender, EventArgs e)
         {
-            DTPago dta = new DTPago();
-            txtIdPago1.Text = "" + dta.idpago();
+            int guardadoC = 0;
+            String msj = "";
+            Entidades.Pago act = new Entidades.Pago();
+            DTPago dT = new DTPago();
+
+            act.IdEmpleado = Convert.ToInt32(txtIDEmpleado.Text);
+            act.IdMoneda = idMoneda();
+            act.Monto = Convert.ToDouble(txtMontoS.Text);
+            guardadoC = dT.guardarPago(act);
+
+            if (guardadoC > 0)
+            {
+                msj = "Pago guardado con éxito!";
+                _msj.ShowMessage(null, "Éxito", msj);
+
+                txtIdPago1.Text = "" + dT.idpago();
+                txtPago2.Text = "" + dT.idpago();
+            }
+            else
+            {
+                msj = "Error al Guardar";
+                _msj.ShowMessage(null, "Error", msj);
+            }
+
+
+
+        }
+
+
+        private int idMoneda()
+        {
+            int IdMoneda = 0;
+            string nombre = cmbMoneda.ActiveText;
+
+            DTMoneda dta = new DTMoneda();
+            List<Nomina.Entidades.Moneda> lista = new List<Nomina.Entidades.Moneda>();
+            lista = dta.ListarMoneda();
+
+            foreach (Nomina.Entidades.Moneda a in lista)
+            {
+                if (a.Nombre == nombre)
+                {
+                    IdMoneda = a.IdMoneda;
+                }
+            }
+
+            return IdMoneda;
+        }
+
+        protected void OnBtnExtraClicked(object sender, EventArgs e)
+        {
+            int guardadoC = 0;
+            String msj = "";
+            Entidades.Pago_Extra act = new Entidades.Pago_Extra();
+            DTPago_Extra dT = new DTPago_Extra();
+
+            act.IdPago = Convert.ToInt32(txtIdPago1.Text);
+            act.IdExtra = idPagosExtra();
+            act.Monto = Convert.ToDouble(txtMontoE.Text);
+            guardadoC = dT.guardarPagoExtra(act);
+
+            if (guardadoC > 0)
+            {
+                msj = "Extra guardado con éxito!";
+                _msj.ShowMessage(null, "Éxito", msj);
+            }
+            else
+            {
+                msj = "Error al Guardar";
+                _msj.ShowMessage(null, "Error", msj);
+            }
+        }
+
+
+        private int idPagosExtra()
+        {
+            int IdExtra = 0;
+            string nombre = cmbExtra.ActiveText;
+
+            DTExtras dta = new DTExtras();
+            List<Nomina.Entidades.Extras> lista = new List<Nomina.Entidades.Extras>();
+            lista = dta.ListarExtras();
+
+            foreach (Nomina.Entidades.Extras a in lista)
+            {
+                if (a.Nombre == nombre)
+                {
+                    IdExtra = a.IdExtra;
+                }
+            }
+
+            return IdExtra;
+        }
+
+        protected void OnBtnDeduccionClicked(object sender, EventArgs e)
+        {
+            int guardadoC = 0;
+            String msj = "";
+            Entidades.Pago_Deduccion act = new Entidades.Pago_Deduccion();
+            DTPago_Deduccion dT = new DTPago_Deduccion();
+
+            act.IdPago = Convert.ToInt32(txtPago2.Text);
+            act.IdDeduccion = idPagosDeduccion();
+            act.Monto = Convert.ToDouble(txtMontoD.Text);
+            guardadoC = dT.guardarPagoDeduccion(act);
+
+            if (guardadoC > 0)
+            {
+                msj = "Deduccion guardada con éxito!";
+                _msj.ShowMessage(null, "Éxito", msj);
+            }
+            else
+            {
+                msj = "Error al Guardar";
+                _msj.ShowMessage(null, "Error", msj);
+            }
+        }
+
+
+        private int idPagosDeduccion()
+        {
+            int IdDeduccion = 0;
+            string nombre = cmbDeduccion.ActiveText;
+
+            DTDeducciones dta = new DTDeducciones();
+            List<Nomina.Entidades.Deducciones> lista = new List<Nomina.Entidades.Deducciones>();
+            lista = dta.ListarDeducciones();
+
+            foreach (Nomina.Entidades.Deducciones a in lista)
+            {
+                if (a.Nombre == nombre)
+                {
+                    IdDeduccion = a.IdDeduccion;
+                }
+            }
+
+            return IdDeduccion;
         }
     }
 }

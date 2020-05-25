@@ -15,7 +15,7 @@ namespace Nomina.Utilidades
 
             salarioAnualneto = salarioMesNeto * 12;
 
-            Console.WriteLine("Salrio:" + salarioAnualneto);
+            //Console.WriteLine("Salrio:" + salarioAnualneto);
 
             deduccionInss = salarioAnualneto - (salarioAnualneto * 0.0625);
 

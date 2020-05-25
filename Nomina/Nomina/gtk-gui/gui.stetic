@@ -4338,7 +4338,7 @@ Inactivo</property>
                                               </packing>
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Entry" id="entry9">
+                                              <widget class="Gtk.Entry" id="txtMontoS">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="IsEditable">True</property>
@@ -4531,7 +4531,7 @@ Inactivo</property>
                                               </packing>
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Entry" id="entry12">
+                                              <widget class="Gtk.Entry" id="txtMontoE">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="IsEditable">True</property>
@@ -4591,12 +4591,13 @@ Inactivo</property>
                                               <placeholder />
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Button" id="button5">
+                                              <widget class="Gtk.Button" id="btnExtra">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="Type">TextOnly</property>
                                                 <property name="Label" translatable="yes">Agregar Extra</property>
                                                 <property name="UseUnderline">True</property>
+                                                <signal name="Clicked" handler="OnBtnExtraClicked" />
                                               </widget>
                                               <packing>
                                                 <property name="Position">2</property>
@@ -4687,7 +4688,7 @@ Inactivo</property>
                                               </packing>
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Entry" id="entry13">
+                                              <widget class="Gtk.Entry" id="txtPago2">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="IsEditable">True</property>
@@ -4721,7 +4722,7 @@ Inactivo</property>
                                               </packing>
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Entry" id="entry14">
+                                              <widget class="Gtk.Entry" id="txtMontoD">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="IsEditable">True</property>
@@ -4781,12 +4782,13 @@ Inactivo</property>
                                               <placeholder />
                                             </child>
                                             <child>
-                                              <widget class="Gtk.Button" id="button6">
+                                              <widget class="Gtk.Button" id="btnDeduccion">
                                                 <property name="MemberName" />
                                                 <property name="CanFocus">True</property>
                                                 <property name="Type">TextOnly</property>
                                                 <property name="Label" translatable="yes">Agregar Deduccion</property>
                                                 <property name="UseUnderline">True</property>
+                                                <signal name="Clicked" handler="OnBtnDeduccionClicked" />
                                               </widget>
                                               <packing>
                                                 <property name="Position">2</property>
@@ -5215,16 +5217,31 @@ Inactivo</property>
                               <widget class="Gtk.Alignment" id="alignment2">
                                 <property name="MemberName" />
                                 <child>
-                                  <placeholder />
+                                  <widget class="Gtk.Label" id="label2">
+                                    <property name="MemberName" />
+                                    <property name="Xalign">1</property>
+                                    <property name="LabelProp" translatable="yes">Monto Total:</property>
+                                  </widget>
                                 </child>
                               </widget>
                               <packing>
                                 <property name="Position">1</property>
                                 <property name="AutoSize">True</property>
+                                <property name="Expand">False</property>
+                                <property name="Fill">False</property>
                               </packing>
                             </child>
                             <child>
-                              <placeholder />
+                              <widget class="Gtk.Entry" id="txtST">
+                                <property name="MemberName" />
+                                <property name="CanFocus">True</property>
+                                <property name="IsEditable">True</property>
+                                <property name="InvisibleChar">•</property>
+                              </widget>
+                              <packing>
+                                <property name="Position">2</property>
+                                <property name="AutoSize">False</property>
+                              </packing>
                             </child>
                           </widget>
                         </child>

@@ -25,7 +25,7 @@ namespace Nomina
 
             foreach (Nomina.Entidades.Empleado a in lista)
             {
-                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString("dd-MM-yyyy"), a.Direccion.ToString());
             }
 
             //Crear el modelo de datos
@@ -66,7 +66,7 @@ namespace Nomina
             {
                 if (busqueda == a.Nombre)
                 {
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString("dd-MM-yyyy"), a.Direccion.ToString());
                     existe = 1;
                 }
             }
@@ -75,7 +75,7 @@ namespace Nomina
             {
                 foreach (Nomina.Entidades.Empleado a in lista)
                 {
-                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                    ls.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString("dd-MM-yyyy"), a.Direccion.ToString());
                 }
             }
 

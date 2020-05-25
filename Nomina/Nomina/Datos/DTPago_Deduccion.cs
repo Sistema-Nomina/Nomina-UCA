@@ -50,6 +50,32 @@ namespace Nomina.Datos
             return listaPago_Deduccion;
         }
 
+        public Int32 guardarPagoDeduccion(Entidades.Pago_Deduccion a)
+        {
+            int guardado = 0;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Insert into nomina.Pago_Deduccion(IdPago, IdDeducciones, Monto) Values(" + a.IdPago + "," + a.IdDeduccion + "," + a.Monto + ");");
+            /*sb.Append("(Nombre, Extension, NumeroRUC)");
+            sb.Append("VALUES('"+ a.Nombre + "','" + a.Extension + "'," + a.NumeroRuc + ";");*/
+
+            try
+            {
+                con.Open();
+                guardado = con.Ejecutar(CommandType.Text, sb.ToString());
+                return guardado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DTPago_Deduccion()
         {
         }

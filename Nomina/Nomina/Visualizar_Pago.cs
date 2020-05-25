@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Gtk;
 using Nomina.Datos;
+using Nomina.Utilidades;
 
 namespace Nomina
 {
@@ -18,6 +19,9 @@ namespace Nomina
         ListStore lsPago = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String), typeof(String));
         ListStore lsPago_Extras = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
         ListStore lsPago_Deducciones = new ListStore(typeof(String), typeof(String), typeof(String), typeof(String));
+        private double _extraMonto = 0;
+        private double _deduccionMonto = 0;
+
 
         //Método para llenar treeview
         public void llenarTreeviewEmpleado()
@@ -28,7 +32,7 @@ namespace Nomina
 
             foreach (Nomina.Entidades.Empleado a in lista)
             {
-                lsEmpleado.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString(), a.Direccion.ToString());
+                lsEmpleado.AppendValues(a.IdEmpleado.ToString(), a.Nombre.ToString(), a.Apellidos.ToString(), a.Cedula.ToString(), a.SalarioEmpleado.ToString(), a.Fecha_contratacion.ToString("dd-MM-yyyy"), a.Direccion.ToString());
             }
 
             //Crear el modelo de datos
@@ -77,6 +81,8 @@ namespace Nomina
         //Metodo para llenar TreeView Pago Extra
         public void llenarTreeviewPago_Extra(Int32 idPago)
         {
+            _extraMonto = 0;
+
             DTPago_Extra dta = new DTPago_Extra();
             List<Nomina.Entidades.Pago_Extra> lista = new List<Nomina.Entidades.Pago_Extra>();
             lista = dta.ListarPago_Extra();
@@ -86,7 +92,7 @@ namespace Nomina
                 if (idPago == a.IdPago)
                 {
                     lsPago_Extras.AppendValues(a.IdEmpleado_Extra.ToString(), a.IdPago.ToString(), a.NombreExtra.ToString(), a.Monto.ToString());
-
+                    _extraMonto += a.Monto;
                 }
 
             }
@@ -95,8 +101,8 @@ namespace Nomina
             trvExtras.Model = lsPago_Extras;
 
 
-            trvExtras.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
-            trvExtras.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
+            //trvExtras.AppendColumn("Id extra del pago", new CellRendererText(), "text", 0);
+            //trvExtras.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
             trvExtras.AppendColumn("Nombre Extra", new CellRendererText(), "text", 2);
             trvExtras.AppendColumn("Monto", new CellRendererText(), "text", 3);
 
@@ -105,6 +111,7 @@ namespace Nomina
         //Metodo para llenar TreeView Pago Deduccion
         public void llenarTreeviewPago_Deduccion(Int32 idPago)
         {
+            _deduccionMonto = 0;
             DTPago_Deduccion dta = new DTPago_Deduccion();
             List<Nomina.Entidades.Pago_Deduccion> lista = new List<Nomina.Entidades.Pago_Deduccion>();
             lista = dta.ListarPago_Deduccion();
@@ -114,7 +121,7 @@ namespace Nomina
                 if (idPago == a.IdPago)
                 {
                     lsPago_Deducciones.AppendValues(a.IdEmpleado_Deduccion.ToString(), a.IdPago.ToString(), a.NombreDeduccion.ToString(), a.Monto.ToString());
-
+                    _deduccionMonto += a.Monto;
                 }
 
             }
@@ -123,8 +130,8 @@ namespace Nomina
             trvDeducciones.Model = lsPago_Deducciones;
 
 
-            trvDeducciones.AppendColumn("Id deduccion del pago", new CellRendererText(), "text", 0);
-            trvDeducciones.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
+            //trvDeducciones.AppendColumn("Id deduccion del pago", new CellRendererText(), "text", 0);
+            //trvDeducciones.AppendColumn("Id Pago", new CellRendererText(), "text", 1);
             trvDeducciones.AppendColumn("Nombre Deduccion", new CellRendererText(), "text", 2);
             trvDeducciones.AppendColumn("Monto", new CellRendererText(), "text", 3);
 
@@ -197,12 +204,24 @@ namespace Nomina
             model.GetIter(out iter, args.Path);
 
             var idPago = model.GetValue(iter, 0);
+            var salario = model.GetValue(iter, 2);
             int idpagar = Convert.ToInt32(idPago);
 
             recargarTreeViewPago_Extra();
             recargarTreeViewPago_Deducciones();
             llenarTreeviewPago_Extra(idpagar);
             llenarTreeviewPago_Deduccion(idpagar);
+
+
+            calcularDeduccion cd = new calcularDeduccion();
+
+            double salarioA = Convert.ToDouble(salario);
+            double salarioInss = salarioA - (salarioA* 0.0625);
+            double salarioIr = salarioInss - cd.calcularIR(salarioA);
+            double salarioCompleto = salarioIr + _extraMonto - _deduccionMonto;
+
+            txtST.Text = salarioCompleto.ToString("N2");
+
         }
 
     }

@@ -52,7 +52,7 @@ namespace Nomina
 
 		private global::Gtk.Label label17;
 
-		private global::Gtk.Entry entry9;
+		private global::Gtk.Entry txtMontoS;
 
 		private global::Gtk.HBox hbox21;
 
@@ -88,7 +88,7 @@ namespace Nomina
 
 		private global::Gtk.Label label18;
 
-		private global::Gtk.Entry entry12;
+		private global::Gtk.Entry txtMontoE;
 
 		private global::Gtk.HBox hbox28;
 
@@ -98,7 +98,7 @@ namespace Nomina
 
 		private global::Gtk.ComboBox cmbExtra;
 
-		private global::Gtk.Button button5;
+		private global::Gtk.Button btnExtra;
 
 		private global::Gtk.Label GtkLabel5;
 
@@ -116,13 +116,13 @@ namespace Nomina
 
 		private global::Gtk.Label label22;
 
-		private global::Gtk.Entry entry13;
+		private global::Gtk.Entry txtPago2;
 
 		private global::Gtk.HBox hbox31;
 
 		private global::Gtk.Label label23;
 
-		private global::Gtk.Entry entry14;
+		private global::Gtk.Entry txtMontoD;
 
 		private global::Gtk.HBox hbox32;
 
@@ -132,7 +132,7 @@ namespace Nomina
 
 		private global::Gtk.ComboBox cmbDeduccion;
 
-		private global::Gtk.Button button6;
+		private global::Gtk.Button btnDeduccion;
 
 		private global::Gtk.Label GtkLabel6;
 
@@ -292,13 +292,13 @@ namespace Nomina
 			w13.Expand = false;
 			w13.Fill = false;
 			// Container child hbox22.Gtk.Box+BoxChild
-			this.entry9 = new global::Gtk.Entry();
-			this.entry9.CanFocus = true;
-			this.entry9.Name = "entry9";
-			this.entry9.IsEditable = true;
-			this.entry9.InvisibleChar = '•';
-			this.hbox22.Add(this.entry9);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.entry9]));
+			this.txtMontoS = new global::Gtk.Entry();
+			this.txtMontoS.CanFocus = true;
+			this.txtMontoS.Name = "txtMontoS";
+			this.txtMontoS.IsEditable = true;
+			this.txtMontoS.InvisibleChar = '•';
+			this.hbox22.Add(this.txtMontoS);
+			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hbox22[this.txtMontoS]));
 			w14.Position = 2;
 			this.hbox20.Add(this.hbox22);
 			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox20[this.hbox22]));
@@ -426,13 +426,13 @@ namespace Nomina
 			w30.Expand = false;
 			w30.Fill = false;
 			// Container child hbox27.Gtk.Box+BoxChild
-			this.entry12 = new global::Gtk.Entry();
-			this.entry12.CanFocus = true;
-			this.entry12.Name = "entry12";
-			this.entry12.IsEditable = true;
-			this.entry12.InvisibleChar = '•';
-			this.hbox27.Add(this.entry12);
-			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.hbox27[this.entry12]));
+			this.txtMontoE = new global::Gtk.Entry();
+			this.txtMontoE.CanFocus = true;
+			this.txtMontoE.Name = "txtMontoE";
+			this.txtMontoE.IsEditable = true;
+			this.txtMontoE.InvisibleChar = '•';
+			this.hbox27.Add(this.txtMontoE);
+			global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.hbox27[this.txtMontoE]));
 			w31.Position = 1;
 			this.hbox25.Add(this.hbox27);
 			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(this.hbox25[this.hbox27]));
@@ -466,13 +466,13 @@ namespace Nomina
 			global::Gtk.Box.BoxChild w35 = ((global::Gtk.Box.BoxChild)(this.hbox33[this.cmbExtra]));
 			w35.Position = 0;
 			// Container child hbox33.Gtk.Box+BoxChild
-			this.button5 = new global::Gtk.Button();
-			this.button5.CanFocus = true;
-			this.button5.Name = "button5";
-			this.button5.UseUnderline = true;
-			this.button5.Label = global::Mono.Unix.Catalog.GetString("Agregar Extra");
-			this.hbox33.Add(this.button5);
-			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox33[this.button5]));
+			this.btnExtra = new global::Gtk.Button();
+			this.btnExtra.CanFocus = true;
+			this.btnExtra.Name = "btnExtra";
+			this.btnExtra.UseUnderline = true;
+			this.btnExtra.Label = global::Mono.Unix.Catalog.GetString("Agregar Extra");
+			this.hbox33.Add(this.btnExtra);
+			global::Gtk.Box.BoxChild w36 = ((global::Gtk.Box.BoxChild)(this.hbox33[this.btnExtra]));
 			w36.Position = 2;
 			w36.Fill = false;
 			this.hbox28.Add(this.hbox33);
@@ -534,13 +534,13 @@ namespace Nomina
 			w43.Expand = false;
 			w43.Fill = false;
 			// Container child hbox30.Gtk.Box+BoxChild
-			this.entry13 = new global::Gtk.Entry();
-			this.entry13.CanFocus = true;
-			this.entry13.Name = "entry13";
-			this.entry13.IsEditable = true;
-			this.entry13.InvisibleChar = '•';
-			this.hbox30.Add(this.entry13);
-			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.hbox30[this.entry13]));
+			this.txtPago2 = new global::Gtk.Entry();
+			this.txtPago2.CanFocus = true;
+			this.txtPago2.Name = "txtPago2";
+			this.txtPago2.IsEditable = true;
+			this.txtPago2.InvisibleChar = '•';
+			this.hbox30.Add(this.txtPago2);
+			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.hbox30[this.txtPago2]));
 			w44.Position = 1;
 			this.hbox29.Add(this.hbox30);
 			global::Gtk.Box.BoxChild w45 = ((global::Gtk.Box.BoxChild)(this.hbox29[this.hbox30]));
@@ -559,13 +559,13 @@ namespace Nomina
 			w46.Expand = false;
 			w46.Fill = false;
 			// Container child hbox31.Gtk.Box+BoxChild
-			this.entry14 = new global::Gtk.Entry();
-			this.entry14.CanFocus = true;
-			this.entry14.Name = "entry14";
-			this.entry14.IsEditable = true;
-			this.entry14.InvisibleChar = '•';
-			this.hbox31.Add(this.entry14);
-			global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.hbox31[this.entry14]));
+			this.txtMontoD = new global::Gtk.Entry();
+			this.txtMontoD.CanFocus = true;
+			this.txtMontoD.Name = "txtMontoD";
+			this.txtMontoD.IsEditable = true;
+			this.txtMontoD.InvisibleChar = '•';
+			this.hbox31.Add(this.txtMontoD);
+			global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.hbox31[this.txtMontoD]));
 			w47.Position = 1;
 			this.hbox29.Add(this.hbox31);
 			global::Gtk.Box.BoxChild w48 = ((global::Gtk.Box.BoxChild)(this.hbox29[this.hbox31]));
@@ -599,13 +599,13 @@ namespace Nomina
 			global::Gtk.Box.BoxChild w51 = ((global::Gtk.Box.BoxChild)(this.hbox34[this.cmbDeduccion]));
 			w51.Position = 0;
 			// Container child hbox34.Gtk.Box+BoxChild
-			this.button6 = new global::Gtk.Button();
-			this.button6.CanFocus = true;
-			this.button6.Name = "button6";
-			this.button6.UseUnderline = true;
-			this.button6.Label = global::Mono.Unix.Catalog.GetString("Agregar Deduccion");
-			this.hbox34.Add(this.button6);
-			global::Gtk.Box.BoxChild w52 = ((global::Gtk.Box.BoxChild)(this.hbox34[this.button6]));
+			this.btnDeduccion = new global::Gtk.Button();
+			this.btnDeduccion.CanFocus = true;
+			this.btnDeduccion.Name = "btnDeduccion";
+			this.btnDeduccion.UseUnderline = true;
+			this.btnDeduccion.Label = global::Mono.Unix.Catalog.GetString("Agregar Deduccion");
+			this.hbox34.Add(this.btnDeduccion);
+			global::Gtk.Box.BoxChild w52 = ((global::Gtk.Box.BoxChild)(this.hbox34[this.btnDeduccion]));
 			w52.Position = 2;
 			w52.Fill = false;
 			this.hbox32.Add(this.hbox34);
@@ -651,6 +651,8 @@ namespace Nomina
 			this.btnBuscar.Clicked += new global::System.EventHandler(this.OnBtnBuscarClicked);
 			this.trvEmpleado.RowActivated += new global::Gtk.RowActivatedHandler(this.OnTrvEmpleadoRowActivated);
 			this.btnGuardarPago.Clicked += new global::System.EventHandler(this.OnBtnGuardarPagoClicked);
+			this.btnExtra.Clicked += new global::System.EventHandler(this.OnBtnExtraClicked);
+			this.btnDeduccion.Clicked += new global::System.EventHandler(this.OnBtnDeduccionClicked);
 		}
 	}
 }

@@ -85,6 +85,32 @@ namespace Nomina.Datos
             return idPago;
         }
 
+        public Int32 guardarPago(Entidades.Pago a)
+        {
+            int guardado = 0;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Insert into nomina.Pago(IdEmpleado, IdMoneda, Monto, Fecha_Pago) Values(" + a.IdEmpleado + "," + a.IdMoneda + "," + a.Monto +", Now());");
+            /*sb.Append("(Nombre, Extension, NumeroRUC)");
+            sb.Append("VALUES('"+ a.Nombre + "','" + a.Extension + "'," + a.NumeroRuc + ";");*/
+
+            try
+            {
+                con.Open();
+                guardado = con.Ejecutar(CommandType.Text, sb.ToString());
+                return guardado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DTPago()
         {
         }
